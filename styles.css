@@ -196,7 +196,7 @@ section {
       rgba(13,13,13,0.6),
       rgba(13,13,13,0.85)
     ),
-url('images/top.gif'),   
+url('/images/top.gif'),   
  radial-gradient(circle at 50% 40%, rgba(201,161,90,0.25), transparent 60%);
   background-size: cover;
   background-position: center;
@@ -331,19 +331,19 @@ url('images/top.gif'),
 }
 
 .menu-image.cocktails {
-  background-image: url('images/cocktail.jpg');
+  background-image: url('/images/cocktail.jpg');
 }
 
 .menu-image.small-plates {
-  background-image: url('images/salad.jpeg');
+  background-image: url('/images/salad.jpeg');
 }
 
 .menu-image.mains {
-  background-image: url('images/main.jpg');
+  background-image: url('/images/main.jpg');
 }
 
 .menu-image.desserts {
-  background-image: url('images/dessert.jpeg');
+  background-image: url('/images/dessert.jpeg');
 }
 
 .menu-btn {
@@ -487,8 +487,12 @@ url('images/top.gif'),
 ================================ */
 
 @media (max-width: 768px) {
-  .nav-menu {
+  .nav-item-full {
     display: none;
+  }
+
+  .nav-item-menu {
+    display: list-item;
   }
 
   .hero h2 {
@@ -498,4 +502,57 @@ url('images/top.gif'),
   .hero p {
     font-size: 16px;
   }
+
+  .menu-section .menu-categories {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+  }
+}
+
+/* ===============================
+   MOBILE OPTIMIZATION
+================================ */
+
+@media (max-width: 768px) {
+
+  /* 1️⃣ 减少左右黑边 */
+  section {
+    padding: 30px 8px;
+  }
+
+  .container {
+    padding: 0 8px;
+  }
+
+  /* 2️⃣ Menu 改成单列 / 双列 */
+  /* .menu-section .menu-categories {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  } */
+   .menu-section .menu-categories {
+  grid-template-columns: repeat(2, 1fr);
+}
+
+  /* 3️⃣ 每个分类卡片更“铺开” */
+  .menu-section .menu-category {
+    min-height: auto;
+    padding: 10px;
+  }
+
+  /* 4️⃣ 图片更宽，不要瘦高 */
+  .menu-section .menu-category::before {
+    border-radius: 12px;
+  }
+
+  /* 5️⃣ 标题和文字更适合手机 */
+  .menu-section h3 {
+    font-size: 20px;
+    margin-top: 12px;
+  }
+
+  .menu-section ul {
+    font-size: 15px;
+    line-height: 1.7;
+  }
+
 }

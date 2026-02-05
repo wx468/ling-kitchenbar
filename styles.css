@@ -1,0 +1,501 @@
+/* ===============================
+   RESET & VARIABLES
+================================ */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --gold: #c9a15a;
+  --gold-light: #d4af37;
+  --bg-dark: #0d0d0d;
+  --bg-card: #1f1f1f;
+  --text-light: #e0e0e0;
+  --text-muted: #9a9a9a;
+  --border: rgba(201,161,90,0.25);
+  --shadow: 0 10px 40px rgba(0,0,0,0.6);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Noto Sans SC', system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+  background-color: var(--bg-dark);
+  color: var(--text-light);
+  line-height: 1.6;
+}
+
+/* ===============================
+   LAYOUT
+================================ */
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+section {
+  padding: 90px 20px;
+}
+
+/* ===============================
+   SECTION CENTERING
+================================ */
+
+.section-header {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.section-header .divider {
+  margin: 0 auto;
+}
+
+.history-section .history-content,
+.menu-section .menu-content,
+.location-section .locations-grid,
+.contact-section .contact-content {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.history-section,
+.menu-section,
+.features-section,
+.location-section,
+.contact-section {
+  text-align: center;
+}
+
+.history-section .history-text,
+.menu-section .menu-category,
+.location-section .location-detail,
+.contact-section .contact-info,
+.contact-section .contact-form {
+  text-align: left;
+}
+
+.menu-section .menu-categories {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 24px;
+  align-items: start;
+}
+
+/* Contact page form inputs centered */
+.contact-form form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  align-items: center;
+}
+
+.contact-form .form-group {
+  width: 100%;
+  max-width: 420px;
+}
+
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  text-align: center;
+}
+
+/* ===============================
+   NAVBAR (重点修复区)
+================================ */
+
+.navbar {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background: rgba(13,13,13,0.95);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid var(--border);
+}
+
+.navbar .container {
+  height: 64px;                 /* 🔥 关键：锁死高度 */
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.logo h1 {
+  font-size: 22px;
+  letter-spacing: 6px;
+  font-weight: 300;
+  margin: 0;
+}
+
+.logo .tagline {
+  font-size: 11px;
+  letter-spacing: 2px;
+  color: var(--text-muted);
+  margin-top: 2px;
+}
+
+.nav-menu {
+  list-style: none;
+  display: flex;
+  gap: 28px;
+}
+
+.nav-menu a {
+  text-decoration: none;
+  color: var(--text-light);
+  font-size: 13px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  position: relative;
+}
+
+.nav-menu a::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -6px;
+  width: 0;
+  height: 2px;
+  background: var(--gold);
+  transition: width 0.3s ease;
+}
+
+.nav-menu a:hover::after {
+  width: 100%;
+}
+
+/* Language Toggle */
+
+
+.lang-toggle  {
+  border: 1px solid var(--border);
+  background: transparent;
+  color: var(--gold);
+  font-size: 12px;
+  padding: 6px 10px;
+  letter-spacing: 1px;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+/* ===============================
+   HERO
+================================ */
+
+.hero {
+  min-height: calc(100vh - 64px);
+  background: linear-gradient(
+      rgba(13,13,13,0.6),
+      rgba(13,13,13,0.85)
+    ),
+url('/images/top.gif'),   
+ radial-gradient(circle at 50% 40%, rgba(201,161,90,0.25), transparent 60%);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.hero-content {
+  max-width: 800px;
+}
+
+.hero h2 {
+  font-size: 42px;
+  font-weight: 300;
+  letter-spacing: 4px;
+  margin-bottom: 20px;
+}
+
+.hero p {
+  font-size: 18px;
+  letter-spacing: 2px;
+  color: var(--text-muted);
+  margin-bottom: 40px;
+}
+
+/* Buttons */
+
+.btn {
+  display: inline-block;
+  padding: 12px 28px;
+  font-size: 13px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.btn-primary {
+  background: var(--gold);
+  color: #000;
+}
+
+.btn-primary:hover {
+  background: var(--gold-light);
+  transform: translateY(-2px);
+}
+
+.btn-secondary {
+  border: 1px solid var(--gold);
+  color: var(--gold);
+}
+
+.btn-secondary:hover {
+  background: var(--gold);
+  color: #000;
+}
+
+/* ===============================
+   HOURS / LOCATION
+================================ */
+
+.hours-section {
+  background: #111;
+}
+
+.hours-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px,1fr));
+  gap: 30px;
+}
+
+.location-card {
+  background: var(--bg-card);
+  padding: 30px;
+  border: 1px solid var(--border);
+  box-shadow: var(--shadow);
+  transition: all 0.3s ease;
+}
+
+.location-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 20px 60px rgba(201,161,90,0.3);
+}
+
+.location-card h3 {
+  color: var(--gold);
+  font-weight: 300;
+  letter-spacing: 2px;
+  margin-bottom: 16px;
+}
+
+/* ===============================
+   MENU FEATURES
+================================ */
+
+.menu-section .menu-category {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+  padding: 30px;
+  border-radius: 8px;
+  min-height: 400px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+/* .menu-section .menu-category::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(13, 13, 13, 0.75);
+  border-radius: 8px;
+  z-index: 0;
+} */
+.menu-image {
+  width: 100%;
+  height: 160px;              /* 👈 关键：统一高度 */
+  border-radius: 6px;
+  margin-bottom: 16px;
+
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.menu-image.cocktails {
+  background-image: url('/images/cocktail.jpg');
+}
+
+.menu-image.small-plates {
+  background-image: url('/images/salad.jpeg');
+}
+
+.menu-image.mains {
+  background-image: url('/images/main.jpg');
+}
+
+.menu-image.desserts {
+  background-image: url('/images/dessert.jpeg');
+}
+
+.menu-btn {
+  margin-top: 32px;
+  display: inline-block;
+}
+
+.features-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px,1fr));
+  gap: 30px;
+}
+
+.feature-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  box-shadow: var(--shadow);
+  text-align: center;
+  padding-bottom: 24px;
+}
+
+.feature-image {
+  height: 200px;
+  background: linear-gradient(135deg,#222,#111);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 48px;
+  color: var(--gold);
+}
+
+.feature-card h3 {
+  margin: 20px 0 10px;
+  color: var(--gold);
+  font-weight: 300;
+}
+
+.feature-card p {
+  padding: 0 20px;
+  font-size: 14px;
+  color: var(--text-muted);
+}
+
+/* ===============================
+   FOOTER
+================================ */
+
+.footer {
+  background: #000;
+  padding: 60px 20px 30px;
+  border-top: 1px solid var(--border);
+}
+
+.footer-content {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px,1fr));
+  gap: 40px;
+}
+
+.footer-logo h3 {
+  font-size: 22px;
+  letter-spacing: 6px;
+  font-weight: 300;
+  margin-bottom: 4px;
+}
+
+.footer-logo p {
+  font-size: 11px;
+  letter-spacing: 2px;
+  color: var(--text-muted);
+}
+
+.footer-bottom {
+  text-align: center;
+  margin-top: 40px;
+  font-size: 13px;
+  color: #777;
+}
+.footer-social {
+  display: flex;
+  gap: 18px;
+  margin-top: 14px;
+}
+
+.footer-social a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.footer-social img {
+  width: 18px;
+  height: 18px;
+
+  /* 把黑色 SVG 变成白色 */
+  filter: brightness(0) invert(1);
+
+  opacity: 0.85;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.footer-contact {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-bottom: 16px;
+}
+
+.contact-item {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+
+  color: var(--text-light);
+  font-size: 14px;
+  text-decoration: none;
+  opacity: 0.85;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.contact-item img {
+  width: 16px;
+  height: 16px;
+
+  /* 让 SVG 变成白色 */
+  filter: brightness(0) invert(1);
+}
+
+.contact-item:hover {
+  opacity: 1;
+  transform: translateX(2px); /* 很轻的高级动效 */
+}
+
+/* hover 高级一点，但不浮夸 */
+.footer-social a:hover img {
+  opacity: 1;
+  transform: translateY(-1px);
+}
+/* ===============================
+   RESPONSIVE
+================================ */
+
+@media (max-width: 768px) {
+  .nav-menu {
+    display: none;
+  }
+
+  .hero h2 {
+    font-size: 30px;
+  }
+
+  .hero p {
+    font-size: 16px;
+  }
+}

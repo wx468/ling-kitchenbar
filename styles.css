@@ -196,7 +196,7 @@ section {
       rgba(13,13,13,0.6),
       rgba(13,13,13,0.85)
     ),
-url('/images/top.gif'),   
+url('images/top.gif'),   
  radial-gradient(circle at 50% 40%, rgba(201,161,90,0.25), transparent 60%);
   background-size: cover;
   background-position: center;
@@ -331,19 +331,19 @@ url('/images/top.gif'),
 }
 
 .menu-image.cocktails {
-  background-image: url('/images/cocktail.jpg');
+  background-image: url('images/cocktail.jpg');
 }
 
 .menu-image.small-plates {
-  background-image: url('/images/salad.jpeg');
+  background-image: url('images/salad.jpeg');
 }
 
 .menu-image.mains {
-  background-image: url('/images/main.jpg');
+  background-image: url('images/main.jpg');
 }
 
 .menu-image.desserts {
-  background-image: url('/images/dessert.jpeg');
+  background-image: url('images/dessert.jpeg');
 }
 
 .menu-btn {

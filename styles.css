@@ -343,7 +343,7 @@ section {
 }
 
 .hero p {
-  font-size: 36px;
+  font-size: 25px;
   letter-spacing: 3px;
   color: var(--text-muted);
   margin-bottom: 40px;
@@ -800,6 +800,11 @@ section {
 
   .vibe-header h2 {
     font-size: 24px;
+  }
+
+  .vibe-cards {
+    grid-template-columns: 1fr;
+    gap: 20px;
   }
 
   .menu-section .menu-categories {

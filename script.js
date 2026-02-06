@@ -47,13 +47,13 @@ let lastScroll = 0;
 
 window.addEventListener('scroll', () => {
     const currentScroll = window.pageYOffset;
-    
+
     if (currentScroll > 50) {
         navbar.style.boxShadow = '0 4px 20px rgba(0, 0, 0, 0.15)';
     } else {
         navbar.style.boxShadow = '0 2px 10px rgba(0, 0, 0, 0.1)';
     }
-    
+
     lastScroll = currentScroll;
 });
 
@@ -62,7 +62,7 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
         e.preventDefault();
         const target = document.querySelector(this.getAttribute('href'));
-        
+
         if (target) {
             const offsetTop = target.offsetTop - 70; // 减去导航栏高度
             window.scrollTo({
@@ -79,27 +79,27 @@ const contactForm = document.querySelector('.contact-form form');
 if (contactForm) {
     contactForm.addEventListener('submit', (e) => {
         e.preventDefault();
-        
+
         // 获取表单数据
         const formData = new FormData(contactForm);
         const name = contactForm.querySelector('input[type="text"]').value;
         const email = contactForm.querySelector('input[type="email"]').value;
         const phone = contactForm.querySelector('input[type="tel"]').value;
         const message = contactForm.querySelector('textarea').value;
-        
+
         // 简单验证
         if (!name || !email || !message) {
             alert('请填写所有必填项！');
             return;
         }
-        
+
         // 这里可以添加实际的表单提交逻辑
         // 例如使用 fetch API 发送到服务器
         console.log('表单数据：', { name, email, phone, message });
-        
+
         // 显示成功消息
         alert('感谢您的留言！我们会尽快与您联系。');
-        
+
         // 重置表单
         contactForm.reset();
     });
@@ -134,16 +134,16 @@ const navLinks = document.querySelectorAll('.nav-menu a');
 
 window.addEventListener('scroll', () => {
     let current = '';
-    
+
     sections.forEach(section => {
         const sectionTop = section.offsetTop;
         const sectionHeight = section.clientHeight;
-        
+
         if (window.pageYOffset >= sectionTop - 100) {
             current = section.getAttribute('id');
         }
     });
-    
+
     navLinks.forEach(link => {
         link.classList.remove('active');
         if (link.getAttribute('href') === `#${current}`) {
@@ -192,7 +192,7 @@ if (menuBtn && menuBtn.getAttribute('href') === '#') {
 window.addEventListener('load', () => {
     document.body.style.opacity = '0';
     document.body.style.transition = 'opacity 0.5s ease';
-    
+
     setTimeout(() => {
         document.body.style.opacity = '1';
     }, 100);
@@ -212,10 +212,117 @@ if ('IntersectionObserver' in window) {
             }
         });
     });
-    
+
     document.querySelectorAll('img[data-src]').forEach(img => {
         imageObserver.observe(img);
     });
 }
 
 console.log('餐厅网站已加载完成！');
+
+// ========================
+// 菜单页面 (menu.html) 功能
+// ========================
+
+// 分类链接激活状态和平滑滚动
+const categoryLinks = document.querySelectorAll('.category-link');
+
+if (categoryLinks.length > 0) {
+    // 处理分类链接点击
+    categoryLinks.forEach(link => {
+        link.addEventListener('click', (e) => {
+            e.preventDefault();
+
+            // 移除所有激活状态
+            categoryLinks.forEach(l => l.classList.remove('active'));
+
+            // 添加当前链接的激活状态
+            link.classList.add('active');
+
+            // 获取目标元素
+            const target = document.querySelector(link.getAttribute('href'));
+            if (target) {
+                const offsetTop = target.offsetTop - 100;
+                window.scrollTo({
+                    top: offsetTop,
+                    behavior: 'smooth'
+                });
+            }
+        });
+    });
+
+    // ========================
+    // 高端 Custom Category Select（Mobile）
+    // ========================
+
+    const customSelect = document.getElementById('categorySelect');
+
+    if (customSelect) {
+        const trigger = customSelect.querySelector('.custom-select-trigger');
+        const label = trigger.querySelector('span');
+        const options = customSelect.querySelectorAll('.custom-options li');
+
+        trigger.addEventListener('click', (e) => {
+            e.stopPropagation();
+            customSelect.classList.toggle('open');
+        });
+
+        options.forEach(option => {
+            option.addEventListener('click', () => {
+                const value = option.dataset.value;
+
+                label.textContent = option.textContent;
+
+                options.forEach(o => o.classList.remove('active'));
+                option.classList.add('active');
+
+                const target = document.getElementById(value);
+                if (target) {
+                    const offsetTop = target.offsetTop - 100;
+                    window.scrollTo({
+                        top: offsetTop,
+                        behavior: 'smooth'
+                    });
+                }
+
+                customSelect.classList.remove('open');
+            });
+        });
+
+        document.addEventListener('click', () => {
+            customSelect.classList.remove('open');
+        });
+    }
+
+    // ========================
+    // 滚动监听：根据右侧内容自动高亮左侧分类
+    // ========================
+    
+    const menuSections = document.querySelectorAll('.menu-category-section');
+    
+    if (menuSections.length > 0) {
+        window.addEventListener('scroll', () => {
+            let currentSection = '';
+            
+            menuSections.forEach(section => {
+                const sectionTop = section.offsetTop;
+                const sectionHeight = section.clientHeight;
+                
+                // 如果滚动位置在当前section范围内
+                if (window.pageYOffset >= sectionTop - 150) {
+                    currentSection = section.getAttribute('id');
+                }
+            });
+            
+            // 更新左侧分类链接的active状态
+            categoryLinks.forEach(link => {
+                link.classList.remove('active');
+                if (link.getAttribute('href') === `#${currentSection}`) {
+                    link.classList.add('active');
+                }
+            });
+        });
+    }
+
+}
+

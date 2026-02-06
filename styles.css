@@ -589,19 +589,19 @@ section {
 }
 
 .menu-image.cocktails {
-  background-image: url('/images/cocktail.jpg');
+  background-image: url('images/cocktail.jpg');
 }
 
 .menu-image.small-plates {
-  background-image: url('/images/salad.jpeg');
+  background-image: url('images/salad.jpeg');
 }
 
 .menu-image.mains {
-  background-image: url('/images/main.jpg');
+  background-image: url('images/main.jpg');
 }
 
 .menu-image.desserts {
-  background-image: url('/images/dessert.jpeg');
+  background-image: url('images/dessert.jpeg');
 }
 
 .menu-btn {

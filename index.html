@@ -16,46 +16,65 @@
     <!-- 导航栏 -->
     <nav class="navbar">
         <div class="container">
-            <div class="logo">
+            <a href="index.html" class="logo">
                 <h1>LING</h1>
                 <p class="tagline"><span data-en="Kitchen & Bar" data-zh="玲珑">Kitchen & Bar</span></p>
-            </div>
+            </a>
             <ul class="nav-menu">
                 <li class="nav-item-full"><a href="#home" data-en="Home" data-zh="首页">Home</a></li>
                 <li class="nav-item-full"><a href="#about" data-en="About" data-zh="关于我们">About</a></li>
                 <li class="nav-item-menu"><a href="menu.html" data-en="Menu" data-zh="菜单">Menu</a></li>
-                <li class="nav-item-full"><a href="contact.html" data-en="Contact" data-zh="联系">Contact</a></li>
+                <li class="nav-item-full"><a href="#footer" data-en="Contact" data-zh="联系">Contact</a></li>
             </ul>
-            <a href="contact.html" class="lang-toggle" data-en="Reserve Table" data-zh="预订">Reserve Table</a>
-            <button class="lang-toggle" id="langToggle">
-                <span class="lang-en">EN</span> / <span class="lang-zh">中文</span>
-            </button>
-            <div class="hamburger">
-                <span></span>
-                <span></span>
-                <span></span>
+            <div class="nav-actions">
+                <a href="#footer" class="lang-toggle" data-en="Reserve Table" data-zh="预订">
+                    Reserve
+                </a>
+
+                <button class="lang-toggle" id="langToggle">
+                    <span class="lang-en">EN</span> / <span class="lang-zh">中文</span>
+                </button>
             </div>
+
         </div>
     </nav>
 
     <!-- 首页横幅 -->
     <section id="home" class="hero">
+        <video class="hero-video" autoplay muted loop playsinline>
+            <source src="videos/top.mp4" type="video/mp4">
+            <source src="videos/hero.webm" type="video/webm">
+        </video>
+        <div class="hero-overlay"></div>
         <div class="hero-content">
-            <h2 data-en="Welcome to Ling Kitchen & Bar" data-zh="欢迎来到 Ling 玲珑">Welcome to Ling Kitchen & Bar</h2>
+            <h2 data-en="Ling Kitchen & Bar" data-zh="Ling 玲珑">Ling Kitchen & Bar</h2>
             <p data-en="Modern Asian Cuisine & Craft Cocktails in the Heart of Vancouver"
                 data-zh="现代亚洲美食与精调鸡尾酒 · 温哥华市中心">Modern Asian Cuisine & Craft Cocktails in the Heart of Vancouver</p>
             <div class="hero-buttons">
-                <a href="#menu" class="btn btn-primary" data-en="View Menu" data-zh="查看菜单">View Menu</a>
-                <a href="#location" class="btn btn-secondary" data-en="Visit Us" data-zh="访问我们">Visit Us</a>
+                <a href="menu.html" class="btn btn-primary" data-en="View Menu" data-zh="查看菜单">View Menu</a>
+                <a href="#location" class="btn btn-secondary" data-en="Visit Us" data-zh="访问我们">Check on Map</a>
             </div>
         </div>
     </section>
 
-    <!-- 营业信息 -->
-    <section class="hours-section">
+    <!-- 关于我们 -->
+    <section id="about" class="history-section">
         <div class="container">
-            <div class="hours-grid">
-                <div class="location-card">
+            <div class="history-content">
+                <div class="about-left">
+
+                    <div class="history-text">
+                        <h3 data-en="Our Story" data-zh="我们的故事">Our Story</h3>
+                        <p data-en="Ling Kitchen & Bar brings a contemporary twist to traditional Asian flavors in the heart of downtown Vancouver. We blend culinary heritage with modern techniques, creating an unforgettable dining experience."
+                            data-zh="Ling 厨房酒吧将传统亚洲风味与现代元素完美融合，坐落于温哥华市中心。我们将传统烹饪技艺与现代手法相结合，打造令人难忘的用餐体验。">Ling Kitchen &
+                            Bar
+                            brings a contemporary twist to traditional Asian flavors in the heart of downtown Vancouver.
+                            We
+                            blend culinary heritage with modern techniques, creating an unforgettable dining experience.
+                        </p>
+                    </div>
+                </div>
+                <div class="about-location">
                     <h3>Downtown Vancouver</h3>
                     <p class="address">📍 <span data-en="1088 Robson Street, Vancouver, BC V6E 1A7"
                             data-zh="温哥华市罗布森街1088号 V6E 1A7">1088 Robson Street, Vancouver, BC V6E 1A7</span></p>
@@ -64,63 +83,60 @@
                     </p>
                     <p class="phone">☎️ (604) 123-4567</p>
                 </div>
-                <div class="location-card happy-hour">
-                    <h3 data-en="Happy Hour" data-zh="欢乐时光">Happy Hour</h3>
-                    <p class="time">🍸 <span data-en="Mon-Fri: 5PM-7PM" data-zh="周一至周五: 下午5点-7点">Mon-Fri: 5PM-7PM</span>
-                    </p>
-                    <p class="special" data-en="$8 Cocktails | 30% OFF Appetizers" data-zh="$8 鸡尾酒 | 开胃菜 7折">$8
-                        Cocktails | 30% OFF Appetizers</p>
-                    <p class="cta" data-en="Join us for drinks & bites!" data-zh="一起来品酒小食！">Join us for drinks & bites!
-                    </p>
+            </div>
+        </div>
+    </section>
+
+
+
+
+    <section class="vibe-section">
+        <div class="vibe-header">
+            <h2>Explore the Vibe</h2>
+            <a href="#" class="all-locations-btn">
+                Reserve Now →
+            </a>
+        </div>
+
+        <div class="vibe-cards">
+            <!-- Card 1 -->
+            <div class="vibe-card">
+                <img src="images/outside.jpg" alt="Interior Vibe">
+                <div class="vibe-info">
+                    <h3>Interior</h3>
+                </div>
+            </div>
+
+            <!-- Card 2 -->
+            <div class="vibe-card">
+                <img src="images/inside.jpg" alt="Dining Space">
+                <div class="vibe-info">
+                    <h3>Dining</h3>
+                </div>
+            </div>
+
+            <!-- Card 3 -->
+            <div class="vibe-card">
+                <img src="images/window.jpg" alt="Entrance Night">
+                <div class="vibe-info">
+                    <h3>Night Entrance</h3>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- 关于我们 -->
-    <section id="about" class="history-section">
-        <div class="container">
-            <div class="section-header">
-                <h2 data-en="About Ling" data-zh="关于 Ling">About Ling</h2>
-                <div class="divider"></div>
-            </div>
-            <div class="history-content">
-                <div class="history-text">
-                    <h3 data-en="Our Story" data-zh="我们的故事">Our Story</h3>
-                    <p data-en="Ling Kitchen & Bar brings a contemporary twist to traditional Asian flavors in the heart of downtown Vancouver. We blend culinary heritage with modern techniques, creating an unforgettable dining experience."
-                        data-zh="Ling 厨房酒吧将传统亚洲风味与现代元素完美融合，坐落于温哥华市中心。我们将传统烹饪技艺与现代手法相结合，打造令人难忘的用餐体验。">Ling Kitchen & Bar
-                        brings a contemporary twist to traditional Asian flavors in the heart of downtown Vancouver. We
-                        blend culinary heritage with modern techniques, creating an unforgettable dining experience.</p>
-                    <p data-en="Our bar features handcrafted cocktails inspired by Asian ingredients and flavors. Whether you're here for dinner, drinks, or late-night bites, Ling offers a vibrant atmosphere perfect for any occasion."
-                        data-zh="我们的酒吧提供以亚洲食材和风味为灵感的手工鸡尾酒。无论您是来享用晚餐、品酒还是夜宵，Ling 都能为您提供适合任何场合的活力氛围。">Our bar features
-                        handcrafted cocktails inspired by Asian ingredients and flavors. Whether you're here for dinner,
-                        drinks, or late-night bites, Ling offers a vibrant atmosphere perfect for any occasion.</p>
-                </div>
-                <div class="history-text">
-                    <h3 data-en="Philosophy" data-zh="理念">Philosophy</h3>
-                    <p data-en="We source the finest ingredients and combine them with innovative culinary techniques. Our menu celebrates both tradition and creativity, offering dishes that are as beautiful as they are delicious."
-                        data-zh="我们精选最优质的食材，结合创新的烹饪技术。我们的菜单既尊重传统又富有创意，呈现的每道菜品不仅美味而且赏心悦目。">We source the finest
-                        ingredients and combine them with innovative culinary techniques. Our menu celebrates both
-                        tradition and creativity, offering dishes that are as beautiful as they are delicious.</p>
-                    <p data-en="Join us for an evening of exceptional food, creative cocktails, and unforgettable memories in Vancouver's most dynamic neighborhood."
-                        data-zh="加入我们，在温哥华最具活力的街区享受美食、创意鸡尾酒和难忘时光。">Join us for an evening of exceptional food, creative
-                        cocktails, and unforgettable memories in Vancouver's most dynamic neighborhood.</p>
-                </div>
-            </div>
-        </div>
-    </section>
 
 
     <!-- 菜单链接 -->
     <section id="menu" class="menu-section">
         <div class="container">
-            <div class="section-header">
-                <h2 data-en="Menu" data-zh="菜单">Menu</h2>
-                <div class="divider"></div>
+            <div class="vibe-header menu-header">
+                <h2 data-en="Modern Asian cuisine" data-zh="现代亚洲美食">Modern Asian Cuisine</h2>
+                <a href="menu.html" class="all-locations-btn" data-en="View Full Menu" data-zh="查看完整菜单">
+                    View Full Menu →
+                </a>
             </div>
             <div class="menu-content">
-                <p class="menu-description" data-en="Modern Asian cuisine with a creative twist" data-zh="富有创意的现代亚洲美食">
-                    Modern Asian cuisine with a creative twist</p>
                 <div class="menu-categories">
                     <div class="menu-category">
                         <div class="menu-image cocktails"></div>
@@ -221,15 +237,12 @@
                         </ul>
                     </div>
                 </div>
-                <a href="menu.html" class="btn btn-primary menu-btn">
-                    View Full Menu
-                </a>
             </div>
         </div>
     </section>
 
     <!-- 页脚 -->
-    <footer class="footer">
+    <footer id="footer" class="footer">
         <div class="container">
             <div class="footer-content">
                 <div class="footer-logo">
@@ -249,16 +262,20 @@
                         </a>
                     </div>
                 </div>
-                <div class="footer-links">
+
+                <div class="footer-location">
+                    <h4 data-en="Location" data-zh="地址">Location</h4>
+                    <p class="location-address">📍 1088 Robson Street,<br>Vancouver, BC V6E 1A7</p>
+                </div>
+
+                <div class="footer-contact">
                     <h4 data-en="Contact" data-zh="联系我们">Contact</h4>
-                    <div class="footer-contact">
-                        <!-- 电话 -->
+                    <div class="contact-list">
                         <a href="tel:+16041234567" class="contact-item">
                             <img src="icons/phone.png" alt="Phone">
                             <span>(604) 123-4567</span>
                         </a>
 
-                        <!-- Email -->
                         <a href="mailto:lingkitchenbar@gmail.com" class="contact-item">
                             <img src="icons/mail.svg" alt="Email">
                             <span>lingkitchenbar@gmail.com</span>
@@ -266,16 +283,16 @@
                     </div>
                 </div>
 
-                    <div class="footer-hours">
-                        <h4 data-en="Hours" data-zh="营业时间">Hours</h4>
-                        <p data-en="Mon-Thu: 5PM-12AM" data-zh="周一至周四: 5PM-12AM">Mon-Thu: 5PM-12AM</p>
-                        <p data-en="Fri-Sun: 5PM-2AM" data-zh="周五至周日: 5PM-2AM">Fri-Sun: 5PM-2AM</p>
-                    </div>
-                </div>
-                <div class="footer-bottom">
-                    <p>&copy; 2026 Ling Kitchen & Bar. All Rights Reserved.</p>
+                <div class="footer-hours">
+                    <h4 data-en="Hours" data-zh="营业时间">Hours</h4>
+                    <p data-en="Mon-Thu: 5PM-12AM" data-zh="周一至周四: 5PM-12AM">Mon-Thu: 5PM-12AM</p>
+                    <p data-en="Fri-Sun: 5PM-2AM" data-zh="周五至周日: 5PM-2AM">Fri-Sun: 5PM-2AM</p>
                 </div>
             </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Ling Kitchen & Bar. All Rights Reserved.</p>
+            </div>
+        </div>
     </footer>
 
     <script src="script.js"></script>

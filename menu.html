@@ -1,103 +1,739 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh-CN">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Menu | Ling Kitchen & Bar</title>
     <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@300;400;500;700&display=swap"
+        rel="stylesheet">
 </head>
 
 <body>
-
-<!-- 导航栏 -->
-<nav class="navbar">
-    <div class="container">
-        <div class="logo">
-            <h1>LING</h1>
-            <p class="tagline"><span data-en="Kitchen & Bar" data-zh="餐吧">Kitchen & Bar</span></p>
-        </div>
-        <ul class="nav-menu">
-            <li><a href="index.html#home" data-en="Home" data-zh="首页">Home</a></li>
-            <li><a href="index.html#about" data-en="About" data-zh="关于我们">About</a></li>
-            <li><a href="menu.html" data-en="Menu" data-zh="菜单">Menu</a></li>
-            <li><a href="contact.html" data-en="Contact" data-zh="联系">Contact</a></li>
-        </ul>
-        <button class="lang-toggle" id="langToggle">
-            <span class="lang-en">EN</span> / <span class="lang-zh">中文</span>
-        </button>
-        <div class="hamburger">
-            <span></span>
-            <span></span>
-            <span></span>
-        </div>
-    </div>
-</nav>
-
-<!-- Menu Hero -->
-<section class="hero" style="padding: 80px 20px;">
-    <div class="hero-content">
-        <h2>Our Menu</h2>
-        <p>Modern Asian Cuisine & Craft Cocktails</p>
-    </div>
-</section>
-
-<!-- 完整菜单 -->
-<section class="menu-section">
-    <div class="container">
-
-        <!-- Cocktails -->
-        <div class="menu-category">
-            <h3>🍸 Cocktails</h3>
-            <ul>
-                <li><span class="dish-name">Lychee Martini</span><span class="dish-price">$14</span></li>
-                <li><span class="dish-name">Yuzu Sour</span><span class="dish-price">$15</span></li>
-                <li><span class="dish-name">Ginger Mule</span><span class="dish-price">$13</span></li>
-                <li><span class="dish-name">Asian Negroni</span><span class="dish-price">$16</span></li>
+    <!-- 导航栏 -->
+    <nav class="navbar navbar-dark">
+        <div class="container">
+            <a href="index.html" class="logo">
+                <h1>LING</h1>
+                <p class="tagline"><span data-en="Kitchen & Bar" data-zh="餐吧">Kitchen & Bar</span></p>
+            </a>
+            <ul class="nav-menu">
+                <li class="nav-item-full"><a href="index.html#home" data-en="Home" data-zh="首页">Home</a></li>
+                <li class="nav-item-full"><a href="index.html#about" data-en="About" data-zh="关于我们">About</a></li>
+                <li class="nav-item-menu"><a href="menu.html" data-en="Menu" data-zh="菜单">Menu</a></li>
+                <li class="nav-item-full"><a href="index.html#footer" data-en="Contact" data-zh="联系">Contact</a></li>
             </ul>
+            <div class="nav-actions">
+                <a href="index.html#footer" class="lang-toggle" data-en="Reserve Table" data-zh="预订">Reserve</a>
+                <button class="lang-toggle" id="langToggle">
+                    <span class="lang-en">EN</span> / <span class="lang-zh">中文</span>
+                </button>
+            </div>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
         </div>
+    </nav>
 
-        <!-- Small Plates -->
-        <div class="menu-category">
-            <h3>🥢 Small Plates</h3>
-            <ul>
-                <li><span class="dish-name">Crispy Brussels Sprouts</span><span class="dish-price">$12</span></li>
-                <li><span class="dish-name">Korean Fried Chicken</span><span class="dish-price">$18</span></li>
-                <li><span class="dish-name">Tuna Tartare</span><span class="dish-price">$22</span></li>
-                <li><span class="dish-name">Truffle Edamame</span><span class="dish-price">$10</span></li>
-            </ul>
+        <!-- 首页横幅 -->
+    <section id="home" class="hero">
+        <video class="hero-video" autoplay muted loop playsinline>
+            <source src="videos/top.mp4" type="video/mp4">
+            <source src="videos/hero.webm" type="video/webm">
+        </video>
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <p data-en="SHAPED by
+TRADITION,
+CRAFTED
+by HAND"
+                data-zh="现代亚洲美食与精调鸡尾酒 · 温哥华市中心">SHAPED by
+TRADITION,
+CRAFTED
+by HAND</p>
+            <div class="hero-buttons">
+                <a href="menu.html" class="btn btn-primary" data-en="View Menu" data-zh="查看菜单">View Menu</a>
+                <a href="#location" class="btn btn-secondary" data-en="Visit Us" data-zh="访问我们">Check on Map</a>
+            </div>
         </div>
+    </section>
 
-        <!-- Mains -->
-        <div class="menu-category">
-            <h3>🍜 Mains</h3>
-            <ul>
-                <li><span class="dish-name">Miso Black Cod</span><span class="dish-price">$32</span></li>
-                <li><span class="dish-name">Wagyu Beef Tataki</span><span class="dish-price">$38</span></li>
-                <li><span class="dish-name">Dan Dan Noodles</span><span class="dish-price">$18</span></li>
-                <li><span class="dish-name">Ling Fried Rice</span><span class="dish-price">$16</span></li>
-            </ul>
+    <!-- Menu Page -->
+    <section class="menu-page-section">
+        <div class="menu-container">
+            <!-- 左侧分类菜单 -->
+            <aside class="menu-sidebar">
+                <h2>Categories</h2>
+                <ul class="category-list">
+                    <li><a href="#appetizers" class="category-link active">Appetizers</a></li>
+                    <li><a href="#salad" class="category-link">Salad</a></li>
+                    <li><a href="#noodle" class="category-link">Noodle</a></li>
+                    <li><a href="#rice" class="category-link">Rice</a></li>
+                    <li><a href="#dumplings" class="category-link">Dumplings</a></li>
+                    <li><a href="#hotpot" class="category-link">Hot Pot</a></li>
+                    <li><a href="#soup" class="category-link">Soup</a></li>
+                    <li><a href="#dessert" class="category-link">Dessert</a></li>
+                    <li><a href="#beverage" class="category-link">Beverage</a></li>
+                    <li><a href="#cocktail" class="category-link">Cocktail</a></li>
+                </ul>
+                <!-- 手机端下拉选择框 -->
+               <!-- Custom Category Select (Mobile Only) -->
+<div class="custom-select" id="categorySelect">
+  <button class="custom-select-trigger">
+    <span>Appetizers</span>
+    <svg width="12" height="12" viewBox="0 0 12 12">
+      <path d="M6 9L1 4h10z" fill="#c9a15a"/>
+    </svg>
+  </button>
+
+  <ul class="custom-options">
+    <li data-value="appetizers" class="active">Appetizers</li>
+    <li data-value="salad">Salad</li>
+    <li data-value="noodle">Noodle</li>
+    <li data-value="rice">Rice</li>
+    <li data-value="dumplings">Dumplings</li>
+    <li data-value="hotpot">Hot Pot</li>
+    <li data-value="soup">Soup</li>
+    <li data-value="dessert">Dessert</li>
+    <li data-value="beverage">Beverage</li>
+    <li data-value="cocktail">Cocktail</li>
+  </ul>
+</div>
+            </aside>
+
+            <!-- 右侧菜品展示 -->
+            <main class="menu-content">
+                <!-- Appetizers -->
+                <section id="appetizers" class="menu-category-section">
+                    <h2>Appetizers</h2>
+                    <div class="menu-grid">
+                        <div class="menu-item">
+                            <div class="menu-image" style="background-image: url('images/salad.jpeg');"></div>
+                            <h4>Crispy Spring Rolls</h4>
+                            <p class="price">$8.99</p>
+                        </div>
+                        <div class="menu-item">
+                            <div class="menu-image" style="background-image: url('images/appetizer-2.jpg');"></div>
+                            <h4>Edamame</h4>
+                            <p class="price">$5.99</p>
+                        </div>
+                        <div class="menu-item">
+                            <div class="menu-image" style="background-image: url('images/appetizer-3.jpg');"></div>
+                            <h4>Gyoza Dumplings</h4>
+                            <p class="price">$7.99</p>
+                        </div>
+                        <div class="menu-item">
+                            <div class="menu-image" style="background-image: url('images/appetizer-4.jpg');"></div>
+                            <h4>Chicken Satay</h4>
+                            <p class="price">$9.99</p>
+                        </div>
+                        <div class="menu-item">
+                            <div class="menu-image" style="background-image: url('images/appetizer-5.jpg');"></div>
+                            <h4>Shrimp Tempura</h4>
+                            <p class="price">$10.99</p>
+                        </div>
+                        <div class="menu-item">
+                            <div class="menu-image" style="background-image: url('images/appetizer-6.jpg');"></div>
+                            <h4>Crab Cakes</h4>
+                            <p class="price">$11.99</p>
+                        </div>
+                        <div class="menu-item">
+                            <div class="menu-image" style="background-image: url('images/appetizer-7.jpg');"></div>
+                            <h4>Scallion Pancake</h4>
+                            <p class="price">$6.99</p>
+                        </div>
+                        <div class="menu-item">
+                            <div class="menu-image" style="background-image: url('images/appetizer-8.jpg');"></div>
+                            <h4>Fish Cake</h4>
+                            <p class="price">$8.99</p>
+                        </div>
+                        <div class="menu-item">
+                            <div class="menu-image" style="background-image: url('images/appetizer-9.jpg');"></div>
+                            <h4>BBQ Meat Skewer</h4>
+                            <p class="price">$9.99</p>
+                        </div>
+                        <div class="menu-item">
+                            <div class="menu-image" style="background-image: url('images/appetizer-10.jpg');"></div>
+                            <h4>Fried Tofu</h4>
+                            <p class="price">$7.99</p>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Salad -->
+                <section id="salad" class="menu-category-section">
+                    <h2>Salad</h2>
+                    <div class="menu-grid">
+                        <div class="menu-item">
+                            <div class="menu-image" style="background-image: url('images/salad-1.jpg');"></div>
+                            <h4>Green Papaya Salad</h4>
+                            <p class="price">$9.99</p>
+                        </div>
+                        <div class="menu-item">
+                            <div class="menu-image" style="background-image: url('images/salad-2.jpg');"></div>
+                            <h4>Seaweed Salad</h4>
+                            <p class="price">$8.99</p>
+                        </div>
+                        <div class="menu-item">
+                            <div class="menu-image" style="background-image: url('images/salad-3.jpg');"></div>
+                            <h4>Beef Salad</h4>
+                            <p class="price">$12.99</p>
+                        </div>
+                        <div class="menu-item">
+                            <div class="menu-image" style="background-image: url('images/salad-4.jpg');"></div>
+                            <h4>Mango Chicken Salad</h4>
+                            <p class="price">$11.99</p>
+                        </div>
+                        <div class="menu-item">
+                            <div class="menu-image" style="background-image: url('images/salad-5.jpg');"></div>
+                            <h4>Squid Salad</h4>
+                            <p class="price">$13.99</p>
+                        </div>
+                        <div class="menu-item">
+                            <div class="menu-image" style="background-image: url('images/salad-6.jpg');"></div>
+                            <h4>Cucumber Salad</h4>
+                            <p class="price">$7.99</p>
+                        </div>
+                        <div class="menu-item">
+                            <div class="menu-image" style="background-image: url('images/salad-7.jpg');"></div>
+                            <h4>Mixed Vegetable Salad</h4>
+                            <p class="price">$8.99</p>
+                        </div>
+                        <div class="menu-item">
+                            <div class="menu-image" style="background-image: url('images/salad-8.jpg');"></div>
+                            <h4>Shrimp Salad</h4>
+                            <p class="price">$12.99</p>
+                        </div>
+                        <div class="menu-item">
+                            <div class="menu-image" style="background-image: url('images/salad-9.jpg');"></div>
+                            <h4>Tofu Salad</h4>
+                            <p class="price">$9.99</p>
+                        </div>
+                        <div class="menu-item">
+                            <div class="menu-image" style="background-image: url('images/salad-10.jpg');"></div>
+                            <h4>Fish Salad</h4>
+                            <p class="price">$13.99</p>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Noodle -->
+                <section id="noodle" class="menu-category-section">
+                    <h2>Noodle</h2>
+                    <div class="menu-grid">
+                        <div class="menu-item">
+                            <div class="menu-image" style="background-image: url('images/noodle-1.jpg');"></div>
+                            <h4>Pad Thai</h4>
+                            <p class="price">$11.99</p>
+                        </div>
+                        <div class="menu-item">
+                            <div class="menu-image" style="background-image: url('images/noodle-2.jpg');"></div>
+                            <h4>Dan Dan Noodles</h4>
+                            <p class="price">$10.99</p>
+                        </div>
+                        <div class="menu-item">
+                            <div class="menu-image" style="background-image: url('images/noodle-3.jpg');"></div>
+                            <h4>Ramen</h4>
+                            <p class="price">$13.99</p>
+                        </div>
+                        <div class="menu-item">
+                            <div class="menu-image" style="background-image: url('images/noodle-4.jpg');"></div>
+                            <h4>Chow Mein</h4>
+                            <p class="price">$10.99</p>
+                        </div>
+                        <div class="menu-item">
+                            <div class="menu-image" style="background-image: url('images/noodle-5.jpg');"></div>
+                            <h4>Pad See Ew</h4>
+                            <p class="price">$11.99</p>
+                        </div>
+                        <div class="menu-item">
+                            <div class="menu-image" style="background-image: url('images/noodle-6.jpg');"></div>
+                            <h4>Laksa</h4>
+                            <p class="price">$12.99</p>
+                        </div>
+                        <div class="menu-item">
+                            <div class="menu-image" style="background-image: url('images/noodle-7.jpg');"></div>
+                            <h4>Singapore Mei Fun</h4>
+                            <p class="price">$11.99</p>
+                        </div>
+                        <div class="menu-item">
+                            <div class="menu-image" style="background-image: url('images/noodle-8.jpg');"></div>
+                            <h4>Phở</h4>
+                            <p class="price">$10.99</p>
+                        </div>
+                        <div class="menu-item">
+                            <div class="menu-image" style="background-image: url('images/noodle-9.jpg');"></div>
+                            <h4>Lo Mein</h4>
+                            <p class="price">$10.99</p>
+                        </div>
+                        <div class="menu-item">
+                            <div class="menu-image" style="background-image: url('images/noodle-10.jpg');"></div>
+                            <h4>Udon</h4>
+                            <p class="price">$11.99</p>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Rice -->
+                <section id="rice" class="menu-category-section">
+                    <h2>Rice</h2>
+                    <div class="menu-grid">
+                        <div class="menu-item">
+                            <div class="menu-image" style="background-image: url('images/rice-1.jpg');"></div>
+                            <h4>Chicken Fried Rice</h4>
+                            <p class="price">$10.99</p>
+                        </div>
+                        <div class="menu-item">
+                            <div class="menu-image" style="background-image: url('images/rice-2.jpg');"></div>
+                            <h4>Shrimp Fried Rice</h4>
+                            <p class="price">$12.99</p>
+                        </div>
+                        <div class="menu-item">
+                            <div class="menu-image" style="background-image: url('images/rice-3.jpg');"></div>
+                            <h4>Beef Fried Rice</h4>
+                            <p class="price">$12.99</p>
+                        </div>
+                        <div class="menu-item">
+                            <div class="menu-image" style="background-image: url('images/rice-4.jpg');"></div>
+                            <h4>Ling Fried Rice</h4>
+                            <p class="price">$13.99</p>
+                        </div>
+                        <div class="menu-item">
+                            <div class="menu-image" style="background-image: url('images/rice-5.jpg');"></div>
+                            <h4>Pineapple Fried Rice</h4>
+                            <p class="price">$12.99</p>
+                        </div>
+                        <div class="menu-item">
+                            <div class="menu-image" style="background-image: url('images/rice-6.jpg');"></div>
+                            <h4>Vegetable Fried Rice</h4>
+                            <p class="price">$9.99</p>
+                        </div>
+                        <div class="menu-item">
+                            <div class="menu-image" style="background-image: url('images/rice-7.jpg');"></div>
+                            <h4>Crab Fried Rice</h4>
+                            <p class="price">$13.99</p>
+                        </div>
+                        <div class="menu-item">
+                            <div class="menu-image" style="background-image: url('images/rice-8.jpg');"></div>
+                            <h4>Squid Ink Fried Rice</h4>
+                            <p class="price">$12.99</p>
+                        </div>
+                        <div class="menu-item">
+                            <div class="menu-image" style="background-image: url('images/rice-9.jpg');"></div>
+                            <h4>Green Curry Rice</h4>
+                            <p class="price">$11.99</p>
+                        </div>
+                        <div class="menu-item">
+                            <div class="menu-image" style="background-image: url('images/rice-10.jpg');"></div>
+                            <h4>Jasmine Rice Bowl</h4>
+                            <p class="price">$5.99</p>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Dumplings -->
+                <section id="dumplings" class="menu-category-section">
+                    <h2>Dumplings</h2>
+                    <div class="menu-grid">
+                        <div class="menu-item">
+                            <div class="menu-image" style="background-image: url('images/dumpling-1.jpg');"></div>
+                            <h4>Pork Dumplings</h4>
+                            <p class="price">$7.99</p>
+                        </div>
+                        <div class="menu-item">
+                            <div class="menu-image" style="background-image: url('images/dumpling-2.jpg');"></div>
+                            <h4>Vegetable Dumplings</h4>
+                            <p class="price">$6.99</p>
+                        </div>
+                        <div class="menu-item">
+                            <div class="menu-image" style="background-image: url('images/dumpling-3.jpg');"></div>
+                            <h4>Shrimp Dumplings</h4>
+                            <p class="price">$8.99</p>
+                        </div>
+                        <div class="menu-item">
+                            <div class="menu-image" style="background-image: url('images/dumpling-4.jpg');"></div>
+                            <h4>Chicken Dumplings</h4>
+                            <p class="price">$7.99</p>
+                        </div>
+                        <div class="menu-item">
+                            <div class="menu-image" style="background-image: url('images/dumpling-5.jpg');"></div>
+                            <h4>Crab Dumplings</h4>
+                            <p class="price">$9.99</p>
+                        </div>
+                        <div class="menu-item">
+                            <div class="menu-image" style="background-image: url('images/dumpling-6.jpg');"></div>
+                            <h4>Seafood Dumplings</h4>
+                            <p class="price">$9.99</p>
+                        </div>
+                        <div class="menu-item">
+                            <div class="menu-image" style="background-image: url('images/dumpling-7.jpg');"></div>
+                            <h4>Truffle Dumplings</h4>
+                            <p class="price">$10.99</p>
+                        </div>
+                        <div class="menu-item">
+                            <div class="menu-image" style="background-image: url('images/dumpling-8.jpg');"></div>
+                            <h4>Shumai</h4>
+                            <p class="price">$7.99</p>
+                        </div>
+                        <div class="menu-item">
+                            <div class="menu-image" style="background-image: url('images/dumpling-9.jpg');"></div>
+                            <h4>Chive Dumplings</h4>
+                            <p class="price">$7.99</p>
+                        </div>
+                        <div class="menu-item">
+                            <div class="menu-image" style="background-image: url('images/dumpling-10.jpg');"></div>
+                            <h4>Pork & Chive Dumplings</h4>
+                            <p class="price">$8.99</p>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Hot Pot -->
+                <section id="hotpot" class="menu-category-section">
+                    <h2>Hot Pot</h2>
+                    <div class="menu-grid">
+                        <div class="menu-item">
+                            <div class="menu-image" style="background-image: url('images/hotpot-1.jpg');"></div>
+                            <h4>Spicy Broth</h4>
+                            <p class="price">$18.99</p>
+                        </div>
+                        <div class="menu-item">
+                            <div class="menu-image" style="background-image: url('images/hotpot-2.jpg');"></div>
+                            <h4>Mild Broth</h4>
+                            <p class="price">$18.99</p>
+                        </div>
+                        <div class="menu-item">
+                            <div class="menu-image" style="background-image: url('images/hotpot-3.jpg');"></div>
+                            <h4>Tom Yum Broth</h4>
+                            <p class="price">$19.99</p>
+                        </div>
+                        <div class="menu-item">
+                            <div class="menu-image" style="background-image: url('images/hotpot-4.jpg');"></div>
+                            <h4>Seafood Hot Pot</h4>
+                            <p class="price">$24.99</p>
+                        </div>
+                        <div class="menu-item">
+                            <div class="menu-image" style="background-image: url('images/hotpot-5.jpg');"></div>
+                            <h4>Beef Hot Pot</h4>
+                            <p class="price">$22.99</p>
+                        </div>
+                        <div class="menu-item">
+                            <div class="menu-image" style="background-image: url('images/hotpot-6.jpg');"></div>
+                            <h4>Chicken Hot Pot</h4>
+                            <p class="price">$20.99</p>
+                        </div>
+                        <div class="menu-item">
+                            <div class="menu-image" style="background-image: url('images/hotpot-7.jpg');"></div>
+                            <h4>Mixed Vegetables</h4>
+                            <p class="price">$12.99</p>
+                        </div>
+                        <div class="menu-item">
+                            <div class="menu-image" style="background-image: url('images/hotpot-8.jpg');"></div>
+                            <h4>Mushroom Assort</h4>
+                            <p class="price">$11.99</p>
+                        </div>
+                        <div class="menu-item">
+                            <div class="menu-image" style="background-image: url('images/hotpot-9.jpg');"></div>
+                            <h4>Tofu Platter</h4>
+                            <p class="price">$9.99</p>
+                        </div>
+                        <div class="menu-item">
+                            <div class="menu-image" style="background-image: url('images/hotpot-10.jpg');"></div>
+                            <h4>Noodles for Hot Pot</h4>
+                            <p class="price">$5.99</p>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Soup -->
+                <section id="soup" class="menu-category-section">
+                    <h2>Soup</h2>
+                    <div class="menu-grid">
+                        <div class="menu-item">
+                            <div class="menu-image" style="background-image: url('images/soup-1.jpg');"></div>
+                            <h4>Tom Yum Soup</h4>
+                            <p class="price">$9.99</p>
+                        </div>
+                        <div class="menu-item">
+                            <div class="menu-image" style="background-image: url('images/soup-2.jpg');"></div>
+                            <h4>Miso Soup</h4>
+                            <p class="price">$5.99</p>
+                        </div>
+                        <div class="menu-item">
+                            <div class="menu-image" style="background-image: url('images/soup-3.jpg');"></div>
+                            <h4>Hot & Sour Soup</h4>
+                            <p class="price">$7.99</p>
+                        </div>
+                        <div class="menu-item">
+                            <div class="menu-image" style="background-image: url('images/soup-4.jpg');"></div>
+                            <h4>Wonton Soup</h4>
+                            <p class="price">$8.99</p>
+                        </div>
+                        <div class="menu-item">
+                            <div class="menu-image" style="background-image: url('images/soup-5.jpg');"></div>
+                            <h4>Seafood Soup</h4>
+                            <p class="price">$11.99</p>
+                        </div>
+                        <div class="menu-item">
+                            <div class="menu-image" style="background-image: url('images/soup-6.jpg');"></div>
+                            <h4>Egg Drop Soup</h4>
+                            <p class="price">$5.99</p>
+                        </div>
+                        <div class="menu-item">
+                            <div class="menu-image" style="background-image: url('images/soup-7.jpg');"></div>
+                            <h4>Chicken Noodle Soup</h4>
+                            <p class="price">$9.99</p>
+                        </div>
+                        <div class="menu-item">
+                            <div class="menu-image" style="background-image: url('images/soup-8.jpg');"></div>
+                            <h4>Coconut Curry Soup</h4>
+                            <p class="price">$10.99</p>
+                        </div>
+                        <div class="menu-item">
+                            <div class="menu-image" style="background-image: url('images/soup-9.jpg');"></div>
+                            <h4>Pork Rib Soup</h4>
+                            <p class="price">$10.99</p>
+                        </div>
+                        <div class="menu-item">
+                            <div class="menu-image" style="background-image: url('images/soup-10.jpg');"></div>
+                            <h4>Vegetable Soup</h4>
+                            <p class="price">$6.99</p>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Dessert -->
+                <section id="dessert" class="menu-category-section">
+                    <h2>Dessert</h2>
+                    <div class="menu-grid">
+                        <div class="menu-item">
+                            <div class="menu-image" style="background-image: url('images/dessert-1.jpg');"></div>
+                            <h4>Matcha Tiramisu</h4>
+                            <p class="price">$6.99</p>
+                        </div>
+                        <div class="menu-item">
+                            <div class="menu-image" style="background-image: url('images/dessert-2.jpg');"></div>
+                            <h4>Mochi Ice Cream</h4>
+                            <p class="price">$5.99</p>
+                        </div>
+                        <div class="menu-item">
+                            <div class="menu-image" style="background-image: url('images/dessert-3.jpg');"></div>
+                            <h4>Black Sesame Panna Cotta</h4>
+                            <p class="price">$6.99</p>
+                        </div>
+                        <div class="menu-item">
+                            <div class="menu-image" style="background-image: url('images/dessert-4.jpg');"></div>
+                            <h4>Mango Sticky Rice</h4>
+                            <p class="price">$7.99</p>
+                        </div>
+                        <div class="menu-item">
+                            <div class="menu-image" style="background-image: url('images/dessert-5.jpg');"></div>
+                            <h4>Passion Fruit Sorbet</h4>
+                            <p class="price">$5.99</p>
+                        </div>
+                        <div class="menu-item">
+                            <div class="menu-image" style="background-image: url('images/dessert-6.jpg');"></div>
+                            <h4>Lychee Cheesecake</h4>
+                            <p class="price">$7.99</p>
+                        </div>
+                        <div class="menu-item">
+                            <div class="menu-image" style="background-image: url('images/dessert-7.jpg');"></div>
+                            <h4>Red Bean Ice</h4>
+                            <p class="price">$5.99</p>
+                        </div>
+                        <div class="menu-item">
+                            <div class="menu-image" style="background-image: url('images/dessert-8.jpg');"></div>
+                            <h4>Coconut Panna Cotta</h4>
+                            <p class="price">$6.99</p>
+                        </div>
+                        <div class="menu-item">
+                            <div class="menu-image" style="background-image: url('images/dessert-9.jpg');"></div>
+                            <h4>Green Tea Cake</h4>
+                            <p class="price">$6.99</p>
+                        </div>
+                        <div class="menu-item">
+                            <div class="menu-image" style="background-image: url('images/dessert-10.jpg');"></div>
+                            <h4>Yuzu Tart</h4>
+                            <p class="price">$7.99</p>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Beverage -->
+                <section id="beverage" class="menu-category-section">
+                    <h2>Beverage</h2>
+                    <div class="menu-grid">
+                        <div class="menu-item">
+                            <div class="menu-image" style="background-image: url('images/beverage-1.jpg');"></div>
+                            <h4>Thai Iced Tea</h4>
+                            <p class="price">$4.99</p>
+                        </div>
+                        <div class="menu-item">
+                            <div class="menu-image" style="background-image: url('images/beverage-2.jpg');"></div>
+                            <h4>Mango Smoothie</h4>
+                            <p class="price">$5.99</p>
+                        </div>
+                        <div class="menu-item">
+                            <div class="menu-image" style="background-image: url('images/beverage-3.jpg');"></div>
+                            <h4>Lychee Juice</h4>
+                            <p class="price">$4.99</p>
+                        </div>
+                        <div class="menu-item">
+                            <div class="menu-image" style="background-image: url('images/beverage-4.jpg');"></div>
+                            <h4>Green Tea</h4>
+                            <p class="price">$3.99</p>
+                        </div>
+                        <div class="menu-item">
+                            <div class="menu-image" style="background-image: url('images/beverage-5.jpg');"></div>
+                            <h4>Jasmine Tea</h4>
+                            <p class="price">$3.99</p>
+                        </div>
+                        <div class="menu-item">
+                            <div class="menu-image" style="background-image: url('images/beverage-6.jpg');"></div>
+                            <h4>Taro Milk Tea</h4>
+                            <p class="price">$5.99</p>
+                        </div>
+                        <div class="menu-item">
+                            <div class="menu-image" style="background-image: url('images/beverage-7.jpg');"></div>
+                            <h4>Passion Fruit Juice</h4>
+                            <p class="price">$4.99</p>
+                        </div>
+                        <div class="menu-item">
+                            <div class="menu-image" style="background-image: url('images/beverage-8.jpg');"></div>
+                            <h4>Ginger Ale</h4>
+                            <p class="price">$3.99</p>
+                        </div>
+                        <div class="menu-item">
+                            <div class="menu-image" style="background-image: url('images/beverage-9.jpg');"></div>
+                            <h4>Yuzu Juice</h4>
+                            <p class="price">$5.99</p>
+                        </div>
+                        <div class="menu-item">
+                            <div class="menu-image" style="background-image: url('images/beverage-10.jpg');"></div>
+                            <h4>Oolong Tea</h4>
+                            <p class="price">$3.99</p>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Cocktail -->
+                <section id="cocktail" class="menu-category-section">
+                    <h2>Cocktail</h2>
+                    <div class="menu-grid">
+                        <div class="menu-item">
+                            <div class="menu-image" style="background-image: url('images/cocktail-1.jpg');"></div>
+                            <h4>Lychee Martini</h4>
+                            <p class="price">$11.99</p>
+                        </div>
+                        <div class="menu-item">
+                            <div class="menu-image" style="background-image: url('images/cocktail-2.jpg');"></div>
+                            <h4>Yuzu Sour</h4>
+                            <p class="price">$12.99</p>
+                        </div>
+                        <div class="menu-item">
+                            <div class="menu-image" style="background-image: url('images/cocktail-3.jpg');"></div>
+                            <h4>Ginger Mule</h4>
+                            <p class="price">$10.99</p>
+                        </div>
+                        <div class="menu-item">
+                            <div class="menu-image" style="background-image: url('images/cocktail-4.jpg');"></div>
+                            <h4>Asian Negroni</h4>
+                            <p class="price">$12.99</p>
+                        </div>
+                        <div class="menu-item">
+                            <div class="menu-image" style="background-image: url('images/cocktail-5.jpg');"></div>
+                            <h4>Mango Margarita</h4>
+                            <p class="price">$11.99</p>
+                        </div>
+                        <div class="menu-item">
+                            <div class="menu-image" style="background-image: url('images/cocktail-6.jpg');"></div>
+                            <h4>Sesame Old Fashioned</h4>
+                            <p class="price">$12.99</p>
+                        </div>
+                        <div class="menu-item">
+                            <div class="menu-image" style="background-image: url('images/cocktail-7.jpg');"></div>
+                            <h4>Coconut Mojito</h4>
+                            <p class="price">$11.99</p>
+                        </div>
+                        <div class="menu-item">
+                            <div class="menu-image" style="background-image: url('images/cocktail-8.jpg');"></div>
+                            <h4>Sake Sangria</h4>
+                            <p class="price">$13.99</p>
+                        </div>
+                        <div class="menu-item">
+                            <div class="menu-image" style="background-image: url('images/cocktail-9.jpg');"></div>
+                            <h4>Lemongrass Cosmopolitan</h4>
+                            <p class="price">$12.99</p>
+                        </div>
+                        <div class="menu-item">
+                            <div class="menu-image" style="background-image: url('images/cocktail-10.jpg');"></div>
+                            <h4>Pandan Daiquiri</h4>
+                            <p class="price">$11.99</p>
+                        </div>
+                    </div>
+                </section>
+            </main>
         </div>
+    </section>
 
-        <!-- Desserts -->
-        <div class="menu-category">
-            <h3>🍰 Desserts</h3>
-            <ul>
-                <li><span class="dish-name">Matcha Tiramisu</span><span class="dish-price">$12</span></li>
-                <li><span class="dish-name">Mochi Ice Cream</span><span class="dish-price">$10</span></li>
-                <li><span class="dish-name">Black Sesame Panna Cotta</span><span class="dish-price">$11</span></li>
-                <li><span class="dish-name">Passion Fruit Sorbet</span><span class="dish-price">$9</span></li>
-            </ul>
+    <!-- 页脚 -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <h3>LING</h3>
+                    <p data-en="Kitchen & Bar" data-zh="餐吧">Kitchen & Bar</p>
+
+                    <div class="footer-social">
+                        <a href="#" aria-label="Instagram" target="_blank">
+                            <img src="icons/instagram.svg" alt="Instagram">
+                        </a>
+
+                        <a href="#" aria-label="Xiaohongshu" target="_blank">
+                            <img src="icons/xiaohongshu.svg" alt="Xiaohongshu">
+                        </a>
+                        <a href="#" aria-label="Douyin" target="_blank">
+                            <img src="icons/tiktok.svg" alt="Douyin">
+                        </a>
+                    </div>
+                </div>
+
+                <div class="footer-location">
+                    <h4 data-en="Location" data-zh="地址">Location</h4>
+                    <p class="location-address">📍 1088 Robson Street,<br>Vancouver, BC V6E 1A7</p>
+                </div>
+
+                <div class="footer-contact">
+                    <h4 data-en="Contact" data-zh="联系我们">Contact</h4>
+                    <div class="contact-list">
+                        <a href="tel:+16041234567" class="contact-item">
+                            <img src="icons/phone.png" alt="Phone">
+                            <span>(604) 123-4567</span>
+                        </a>
+
+                        <a href="mailto:lingkitchenbar@gmail.com" class="contact-item">
+                            <img src="icons/mail.svg" alt="Email">
+                            <span>lingkitchenbar@gmail.com</span>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="footer-hours">
+                    <h4 data-en="Hours" data-zh="营业时间">Hours</h4>
+                    <p data-en="Mon-Thu: 5PM-12AM" data-zh="周一至周四: 5PM-12AM">Mon-Thu: 5PM-12AM</p>
+                    <p data-en="Fri-Sun: 5PM-2AM" data-zh="周五至周日: 5PM-2AM">Fri-Sun: 5PM-2AM</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Ling Kitchen & Bar. All Rights Reserved.</p>
+            </div>
         </div>
+    </footer>
 
-    </div>
-</section>
-
-<!-- Footer 可直接复用 index.html -->
-<footer class="footer">
-    <div class="container">
-        <p>&copy; 2026 Ling Kitchen & Bar</p>
-    </div>
-</footer>
-
+    <script src="script.js"></script>
 </body>
 </html>

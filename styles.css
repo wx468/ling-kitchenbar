@@ -343,7 +343,7 @@ section {
 }
 
 .hero p {
-  font-size: 25px;
+  font-size: 20px;
   letter-spacing: 3px;
   color: var(--text-muted);
   margin-bottom: 40px;

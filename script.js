@@ -41,20 +41,15 @@ document.querySelectorAll('.nav-menu a').forEach(link => {
     });
 });
 
-// 滚动时导航栏添加阴影效果
+// 滚动时导航栏显示黑色背景
 const navbar = document.querySelector('.navbar');
-let lastScroll = 0;
 
 window.addEventListener('scroll', () => {
-    const currentScroll = window.pageYOffset;
-
-    if (currentScroll > 50) {
-        navbar.style.boxShadow = '0 4px 20px rgba(0, 0, 0, 0.15)';
-    } else {
-        navbar.style.boxShadow = '0 2px 10px rgba(0, 0, 0, 0.1)';
-    }
-
-    lastScroll = currentScroll;
+  if (window.scrollY > 0) {
+    navbar.classList.add('scrolled');
+  } else {
+    navbar.classList.remove('scrolled');
+  }
 });
 
 // 平滑滚动到锚点

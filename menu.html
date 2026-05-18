@@ -39,77 +39,194 @@
         </div>
     </nav>
 
-        <!-- 首页横幅 -->
-    <section id="home" class="hero">
-        <video class="hero-video" autoplay muted loop playsinline>
-            <source src="videos/top.mp4" type="video/mp4">
-            <source src="videos/hero.webm" type="video/webm">
-        </video>
-        <div class="hero-overlay"></div>
-        <div class="hero-content">
-            <p data-en="SHAPED by
-TRADITION,
-CRAFTED
-by HAND"
-                data-zh="现代亚洲美食与精调鸡尾酒 · 温哥华市中心">SHAPED by
-TRADITION,
-CRAFTED
-by HAND</p>
-            <div class="hero-buttons">
-                <a href="menu.html" class="btn btn-primary" data-en="View Menu" data-zh="查看菜单">View Menu</a>
-                <a href="#location" class="btn btn-secondary" data-en="Visit Us" data-zh="访问我们">Check on Map</a>
-            </div>
-        </div>
-    </section>
+    
 
     <!-- Menu Page -->
     <section class="menu-page-section">
         <div class="menu-container">
-            <!-- 左侧分类菜单 -->
-            <aside class="menu-sidebar">
-                <h2>Categories</h2>
-                <ul class="category-list">
-                    <li><a href="#appetizers" class="category-link active">Appetizers</a></li>
-                    <li><a href="#salad" class="category-link">Salad</a></li>
-                    <li><a href="#noodle" class="category-link">Noodle</a></li>
-                    <li><a href="#rice" class="category-link">Rice</a></li>
-                    <li><a href="#dumplings" class="category-link">Dumplings</a></li>
-                    <li><a href="#hotpot" class="category-link">Hot Pot</a></li>
-                    <li><a href="#soup" class="category-link">Soup</a></li>
-                    <li><a href="#dessert" class="category-link">Dessert</a></li>
-                    <li><a href="#beverage" class="category-link">Beverage</a></li>
-                    <li><a href="#cocktail" class="category-link">Cocktail</a></li>
-                </ul>
-                <!-- 手机端下拉选择框 -->
-               <!-- Custom Category Select (Mobile Only) -->
+                        <!-- 左侧分类菜单 -->
+                        <aside class="menu-sidebar">
+                                <h2>Categories</h2>
+                                <ul class="category-list">
+                                    <li><a href="#house-special" class="category-link active" data-en="House Special" data-zh="House Special">House Special</a></li>
+                                    <li><a href="#xian-street-food" class="category-link" data-en="XI’AN STREET FOOD" data-zh="西安小吃">XI’AN STREET FOOD</a></li>
+                                    <li><a href="#crispy-bites" class="category-link" data-en="CRISPY BITES" data-zh="酥炸小食">CRISPY BITES</a></li>
+                                    <li><a href="#appetizers-meat" class="category-link" data-en="Appetizers – Meat" data-zh="肉类前菜">Appetizers – Meat</a></li>
+                                    <li><a href="#appetizers-vegetables" class="category-link" data-en="Appetizers – Vegetables" data-zh="开胃小菜">Appetizers – Vegetables</a></li>
+                                    <li><a href="#handmade-dumplings" class="category-link" data-en="Handmade Dumplings & Wontons" data-zh="手工水饺 & 馄饨">Handmade Dumplings & Wontons</a></li>
+                                    <li><a href="#pan-fried-buns" class="category-link" data-en="Pan-Fried Buns" data-zh="生煎包">Pan-Fried Buns</a></li>
+                                    <li><a href="#noodles" class="category-link" data-en="Noodles" data-zh="西安手扯面（干拌）">Noodles</a></li>
+                                    <li><a href="#noodle-soup" class="category-link" data-en="Noodle Soup" data-zh="西安手扯面（汤面）">Noodle Soup</a></li>
+                                    <li><a href="#rice-bowls" class="category-link" data-en="Rice Bowls & Fried Rice" data-zh="盖饭 & 炒饭">Rice Bowls & Fried Rice</a></li>
+                                    <li><a href="#soups" class="category-link" data-en="Soups" data-zh="汤品">Soups</a></li>
+                                    <li><a href="#desserts" class="category-link" data-en="Desserts" data-zh="甜品">Desserts</a></li>
+                                    <li><a href="#hotpot" class="category-link" data-en="Hot Pot" data-zh="火锅">Hot Pot</a></li>
+                                </ul>
+                                <!-- 手机端下拉选择框 -->
+                             <!-- Custom Category Select (Mobile Only) -->
 <div class="custom-select" id="categorySelect">
-  <button class="custom-select-trigger">
-    <span>Appetizers</span>
-    <svg width="12" height="12" viewBox="0 0 12 12">
-      <path d="M6 9L1 4h10z" fill="#c9a15a"/>
-    </svg>
-  </button>
+    <button class="custom-select-trigger">
+        <span data-en="House Special" data-zh="House Special">House Special</span>
+        <svg width="12" height="12" viewBox="0 0 12 12">
+            <path d="M6 9L1 4h10z" fill="#c9a15a"/>
+        </svg>
+    </button>
 
-  <ul class="custom-options">
-    <li data-value="appetizers" class="active">Appetizers</li>
-    <li data-value="salad">Salad</li>
-    <li data-value="noodle">Noodle</li>
-    <li data-value="rice">Rice</li>
-    <li data-value="dumplings">Dumplings</li>
-    <li data-value="hotpot">Hot Pot</li>
-    <li data-value="soup">Soup</li>
-    <li data-value="dessert">Dessert</li>
-    <li data-value="beverage">Beverage</li>
-    <li data-value="cocktail">Cocktail</li>
-  </ul>
+    <ul class="custom-options">
+        <li data-value="house-special" class="active" data-en="House Special" data-zh="House Special">House Special</li>
+        <li data-value="xian-street-food" data-en="Xi’an Street Food" data-zh="西安小吃">Xi’an Street Food</li>
+        <li data-value="crispy-bites" data-en="Crispy Bites" data-zh="酥炸小食">Crispy Bites</li>
+        <li data-value="appetizers-meat" data-en="Appetizers – Meat" data-zh="肉类前菜">Appetizers – Meat</li>
+        <li data-value="appetizers-vegetables" data-en="Appetizers – Vegetables" data-zh="开胃小菜">Appetizers – Vegetables</li>
+        <li data-value="handmade-dumplings" data-en="Handmade Dumplings & Wontons" data-zh="手工水饺 & 馄饨">Handmade Dumplings & Wontons</li>
+        <li data-value="pan-fried-buns" data-en="Pan-Fried Buns" data-zh="生煎包">Pan-Fried Buns</li>
+        <li data-value="noodles" data-en="Noodles" data-zh="西安手扯面（干拌）">Noodles</li>
+        <li data-value="noodle-soup" data-en="Noodle Soup" data-zh="西安手扯面（汤面）">Noodle Soup</li>
+        <li data-value="rice-bowls" data-en="Rice Bowls & Fried Rice" data-zh="盖饭 & 炒饭">Rice Bowls & Fried Rice</li>
+        <li data-value="soups" data-en="Soups" data-zh="汤品">Soups</li>
+        <li data-value="desserts" data-en="Desserts" data-zh="甜品">Desserts</li>
+        <li data-value="hotpot" data-en="Hot Pot" data-zh="火锅">Hot Pot</li>
+    </ul>
 </div>
-            </aside>
+                        </aside>
 
             <!-- 右侧菜品展示 -->
             <main class="menu-content">
-                <!-- Appetizers -->
-                <section id="appetizers" class="menu-category-section">
-                    <h2>Appetizers</h2>
+
+                <!-- House Special (placeholder) -->
+                <section id="house-special" class="menu-category-section">
+                    <h2 data-en="House Special" data-zh="招牌推荐">House Special</h2>
+                    <div class="menu-grid">
+                        <div class="menu-item">
+                            <div class="menu-image" style="background-image: url('images/house-1.jpg');"></div>
+                            <h4 data-en="House-Glazed Angus Short Ribs" data-zh="酱烤安格斯牛小排">House-Glazed Angus Short Ribs</h4>
+                            <p class="desc" data-en="Slow-roasted Angus beef short ribs glazed with our signature house sauce, offering rich savory flavors with a hint of Asian-inspired sweetness." data-zh="慢烤安格斯牛小排，刷上招牌酱汁，风味浓郁，带有一抹亚洲风味的微甜。">Slow-roasted Angus beef short ribs glazed with our signature house sauce, offering rich savory flavors with a hint of Asian-inspired sweetness.</p>
+                            <p class="price"></p>
+                        </div>
+
+                        <div class="menu-item">
+                            <div class="menu-image" style="background-image: url('images/house-2.jpg');"></div>
+                            <h4 data-en="Hand-pulled Lamb Chops" data-zh="手把羊肉">Hand-pulled Lamb Chops</h4>
+                            <p class="desc" data-en="Tender lamb ribs slow-cooked in Xi’an style, complemented by house chili soy sauce and signature chili seasoning." data-zh="西安风味慢炖手把羊排，配以招牌辣酱油和特制辣粉，香辣入味，肉质鲜嫩。">Tender lamb ribs slow-cooked in Xi’an style, complemented by house chili soy sauce and signature chili seasoning.</p>
+                            <p class="price"></p>
+                        </div>
+
+                        <div class="menu-item">
+                            <div class="menu-image" style="background-image: url('images/house-3.jpg');"></div>
+                            <h4 data-en="Five Spice Smoked Black Cod" data-zh="五香熏鳕鱼">Five Spice Smoked Black Cod</h4>
+                            <p class="desc" data-en="Lightly fried cod finished with aromatic Chinese five-spice soy sauce, crispy on the outside and tender on the inside." data-zh="鳕鱼轻炸后淋上五香酱油，外酥里嫩，香气四溢。">Lightly fried cod finished with aromatic Chinese five-spice soy sauce, crispy on the outside and tender on the inside.</p>
+                            <p class="price"></p>
+                        </div>
+
+                        <div class="menu-item">
+                            <div class="menu-image" style="background-image: url('images/house-4.jpg');"></div>
+                            <h4 data-en="Lobster & Seafood Noodle Soup" data-zh="龙虾海鲜面">Lobster & Seafood Noodle Soup</h4>
+                            <p class="desc" data-en="Fresh noodles served in a rich seafood broth with lobster tail, shrimp, and seasonal seafood." data-zh="鲜手工面搭配浓郁海鲜汤底，配有龙虾尾、虾仁及时令海鲜。">Fresh noodles served in a rich seafood broth with lobster tail, shrimp, and seasonal seafood.</p>
+                            <p class="price"></p>
+                        </div>
+
+                        <div class="menu-item">
+                            <div class="menu-image" style="background-image: url('images/house-5.jpg');"></div>
+                            <h4 data-en="Stir-Fried Pea Shoots with Garlic" data-zh="蒜蓉豆苗">Stir-Fried Pea Shoots with Garlic</h4>
+                            <p class="desc" data-en="Tender pea shoots stir-fried with aromatic garlic, simple and refreshing." data-zh="蒜蓉豆苗清炒，蒜香提鲜，清爽宜人。">Tender pea shoots stir-fried with aromatic garlic, simple and refreshing.</p>
+                            <p class="price"></p>
+                        </div>
+
+                        <div class="menu-item">
+                            <div class="menu-image" style="background-image: url('images/house-6.jpg');"></div>
+                            <h4 data-en="Stir-Fried Cabbage" data-zh="手撕包菜">Stir-Fried Cabbage</h4>
+                            <p class="desc" data-en="Fresh hand-torn cabbage stir-fried with garlic and chili for a savory, aromatic flavor." data-zh="手撕包菜快炒，加入蒜与辣椒提味，香辣可口。">Fresh hand-torn cabbage stir-fried with garlic and chili for a savory, aromatic flavor.</p>
+                            <p class="price"></p>
+                        </div>
+
+                        <div class="menu-item">
+                            <div class="menu-image" style="background-image: url('images/house-7.jpg');"></div>
+                            <h4 data-en="Crispy Fried Tofu" data-zh="酥炸豆腐">Crispy Fried Tofu</h4>
+                            <p class="desc" data-en="Golden-fried tofu, crispy on the outside and soft inside." data-zh="金黄酥脆的炸豆腐，外酥里嫩。">Golden-fried tofu, crispy on the outside and soft inside.</p>
+                            <p class="price"></p>
+                        </div>
+
+                        <div class="menu-item">
+                            <div class="menu-image" style="background-image: url('images/house-8.jpg');"></div>
+                            <h4 data-en="House Fried Shrimp" data-zh="酥炸虾仁">House Fried Shrimp</h4>
+                            <p class="desc" data-en="Fresh shrimp lightly battered and fried until golden and crispy." data-zh="鲜虾薄裹面衣，油炸至金黄酥脆。">Fresh shrimp lightly battered and fried until golden and crispy.</p>
+                            <p class="price"></p>
+                        </div>
+
+                        <div class="menu-item">
+                            <div class="menu-image" style="background-image: url('images/house-9.jpg');"></div>
+                            <h4 data-en="Sea cucumber, Chive & Pork Dumplings" data-zh="海参韭菜猪肉水饺">Sea cucumber, Chive & Pork Dumplings</h4>
+                            <p class="desc" data-en="Delicately wrapped dumplings filled with premium sea cucumber, fresh chives, and seasoned pork." data-zh="精致包好的水饺，内馅选用优质海参、鲜韭菜与调味猪肉。">Delicately wrapped dumplings filled with premium sea cucumber, fresh chives, and seasoned pork.</p>
+                            <p class="price"></p>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Xi'an Street Food (placeholder) -->
+                <section id="xian-street-food" class="menu-category-section">
+                    <h2 data-en="Xi’an Street Food" data-zh="西安小吃">Xi’an Street Food</h2>
+                    <div class="menu-grid">
+                        <div class="menu-item">
+                            <div class="menu-image" style="background-image: url('images/xian-1.jpg');"></div>
+                            <h4 data-en="Liang-Pi" data-zh="凉皮">Liang-Pi</h4>
+                            <p class="desc" data-en="Cold rice noodles, wheat gluten cube, bean sprout, cucumber, sour garlic sauce, Xi’an chili oil" data-zh="凉皮、面筋块、豆芽、黄瓜、酸蒜酱、陕西辣子油">Cold rice noodles, wheat gluten cube, bean sprout, cucumber, sour garlic sauce, Xi’an chili oil</p>
+                            <p class="price"></p>
+                        </div>
+
+                        <div class="menu-item">
+                            <div class="menu-image" style="background-image: url('images/xian-2.jpg');"></div>
+                            <h4 data-en="Liang-Pi with Sesame Sauce" data-zh="麻汁凉皮">Liang-Pi with Sesame Sauce</h4>
+                            <p class="desc" data-en="Cold rice noodles, wheat gluten cube, bean sprout, cucumber, sour garlic sauce, Xi’an chili oil, sesame sauce" data-zh="凉皮、面筋块、豆芽、黄瓜、酸蒜酱、陕西辣子油、麻酱">Cold rice noodles, wheat gluten cube, bean sprout, cucumber, sour garlic sauce, Xi’an chili oil, sesame sauce</p>
+                            <p class="price"></p>
+                        </div>
+
+                        <div class="menu-item">
+                            <div class="menu-image" style="background-image: url('images/xian-3.jpg');"></div>
+                            <h4 data-en="Pepper Leaf Fried Pancake" data-zh="椒香油饼">Pepper Leaf Fried Pancake</h4>
+                            <p class="desc" data-en="Dried pepper leaf, pickled sour beans" data-zh="干椒叶、酸豆角">Dried pepper leaf, pickled sour beans</p>
+                            <p class="price"></p>
+                        </div>
+
+                        <div class="menu-item">
+                            <div class="menu-image" style="background-image: url('images/xian-4.jpg');"></div>
+                            <h4 data-en="Fern Root Noodle with Dark Vinegar Sauce" data-zh="蕨根粉">Fern Root Noodle with Dark Vinegar Sauce</h4>
+                            <p class="desc" data-en="Fern root noodles, dark vinegar sauce" data-zh="蕨根粉，配以陈醋酱汁">Fern root noodles, dark vinegar sauce</p>
+                            <p class="price"></p>
+                        </div>
+
+                        <div class="menu-item">
+                            <div class="menu-image" style="background-image: url('images/xian-5.jpg');"></div>
+                            <h4 data-en="Stewed Pork Burger" data-zh="肉夹馍">Stewed Pork Burger</h4>
+                            <p class="desc" data-en="Chinese herb-braised pork belly, house-made flat bun" data-zh="中草药卤制五花肉，配自制白吉馍">Chinese herb-braised pork belly, house-made flat bun</p>
+                            <p class="options" data-en="· Add shredded potato $0.50 · Add pickled long beans $0.50" data-zh="· 加土豆丝 $0.50 · 加酸豆角 $0.50">· 加土豆丝 $0.50 · 加酸豆角 $0.50</p>
+                            <p class="price"></p>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Crispy Bites (placeholder) -->
+                <section id="crispy-bites" class="menu-category-section">
+                    <h2 data-en="Crispy Bites" data-zh="酥炸小食">Crispy Bites</h2>
+                    <div class="menu-grid">
+                        <div class="menu-item">
+                            <div class="menu-image" style="background-image: url('images/crispy-1.jpg');"></div>
+                            <h4 data-en="House Crispy Chicken Bite" data-zh="香酥炸鸡块">House Crispy Chicken Bite</h4>
+                            <p class="desc" data-en="Fried chicken thigh, chili seasoning, garlic citrus sauce, oyster ketchup" data-zh="炸鸡腿块，辣味调料，蒜香柑橘酱，蚝油番茄酱">Fried chicken thigh, chili seasoning, garlic citrus sauce, oyster ketchup</p>
+                            <p class="price"></p>
+                        </div>
+
+                        <div class="menu-item">
+                            <div class="menu-image" style="background-image: url('images/crispy-2.jpg');"></div>
+                            <h4 data-en="Crispy Shrimp & Yellow Chive Spring Rolls" data-zh="韭黄虾仁春卷">Crispy Shrimp & Yellow Chive Spring Rolls</h4>
+                            <p class="desc" data-en="Shrimp, yellow chives, crispy wrapper, chili powder, garlic citrus sauce, oyster ketchup" data-zh="虾仁、韭黄、酥脆外皮、辣椒粉、蒜香柑橘酱、蚝油番茄酱">Shrimp, yellow chives, crispy wrapper, chili powder, garlic citrus sauce, oyster ketchup</p>
+                            <p class="price"></p>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Appetizers – Meat (moved from Appetizers) -->
+                <section id="appetizers-meat" class="menu-category-section">
+                    <h2 data-en="Appetizers – Meat" data-zh="肉类前菜">Appetizers – Meat</h2>
                     <div class="menu-grid">
                         <div class="menu-item subject1-item">
                             <div class="menu-image" style="background-image: url('images/Subject1.webp');"></div>
@@ -122,46 +239,6 @@ by HAND</p>
                             <p class="price">$10.99</p>
                         </div>
                         <div class="menu-item">
-                            <div class="menu-image" style="background-image: url('images/Subject 5.webp');"></div>
-                            <h4>Pan Fried Dumpling</h4>
-                            <p class="price">$12.99</p>
-                        </div>
-                        <div class="menu-item">
-                            <div class="menu-image" style="background-image: url('images/appetizer-2.jpg');"></div>
-                            <h4>Edamame</h4>
-                            <p class="price">$5.99</p>
-                        </div>
-                        <div class="menu-item">
-                            <div class="menu-image" style="background-image: url('images/appetizer-3.jpg');"></div>
-                            <h4>Gyoza Dumplings</h4>
-                            <p class="price">$7.99</p>
-                        </div>
-                        <div class="menu-item">
-                            <div class="menu-image" style="background-image: url('images/appetizer-4.jpg');"></div>
-                            <h4>Chicken Satay</h4>
-                            <p class="price">$9.99</p>
-                        </div>
-                        <div class="menu-item">
-                            <div class="menu-image" style="background-image: url('images/appetizer-5.jpg');"></div>
-                            <h4>Shrimp Tempura</h4>
-                            <p class="price">$10.99</p>
-                        </div>
-                        <div class="menu-item">
-                            <div class="menu-image" style="background-image: url('images/appetizer-6.jpg');"></div>
-                            <h4>Crab Cakes</h4>
-                            <p class="price">$11.99</p>
-                        </div>
-                        <div class="menu-item">
-                            <div class="menu-image" style="background-image: url('images/appetizer-7.jpg');"></div>
-                            <h4>Scallion Pancake</h4>
-                            <p class="price">$6.99</p>
-                        </div>
-                        <div class="menu-item">
-                            <div class="menu-image" style="background-image: url('images/appetizer-8.jpg');"></div>
-                            <h4>Fish Cake</h4>
-                            <p class="price">$8.99</p>
-                        </div>
-                        <div class="menu-item">
                             <div class="menu-image" style="background-image: url('images/appetizer-9.jpg');"></div>
                             <h4>BBQ Meat Skewer</h4>
                             <p class="price">$9.99</p>
@@ -171,183 +248,130 @@ by HAND</p>
                             <h4>Fried Tofu</h4>
                             <p class="price">$7.99</p>
                         </div>
+                        <div class="menu-item">
+                            <div class="menu-image" style="background-image: url('images/appetizer-meat-1.jpg');"></div>
+                            <h4 data-en="Sweet & Sour Pork Ribs" data-zh="糖醋排骨">Sweet & Sour Pork Ribs</h4>
+                            <p class="desc" data-en="Chopped pork ribs, black vinegar sauce" data-zh="切块排骨，黑醋酱">Chopped pork ribs, black vinegar sauce</p>
+                            <p class="price"></p>
+                        </div>
+
+                        <div class="menu-item">
+                            <div class="menu-image" style="background-image: url('images/appetizer-meat-2.jpg');"></div>
+                            <h4 data-en="Spicy Braised Beef Salad with Onion" data-zh="圆葱牛肉">Spicy Braised Beef Salad with Onion</h4>
+                            <p class="desc" data-en="Sliced braised beef shank, onion, chili sauce" data-zh="卤牛腱切片，圆葱，辣酱">Sliced braised beef shank, onion, chili sauce</p>
+                            <p class="price"></p>
+                        </div>
+
+                        <div class="menu-item">
+                            <div class="menu-image" style="background-image: url('images/appetizer-meat-3.jpg');"></div>
+                            <h4 data-en="Cold-Cut Braised Pork Shoulder" data-zh="酱肘子">Cold-Cut Braised Pork Shoulder</h4>
+                            <p class="desc" data-en="Sliced braised pork shoulder, garlic sauce" data-zh="卤肘子切片，蒜香酱">Sliced braised pork shoulder, garlic sauce</p>
+                            <p class="price"></p>
+                        </div>
+
+                        <div class="menu-item">
+                            <div class="menu-image" style="background-image: url('images/appetizer-meat-4.jpg');"></div>
+                            <h4 data-en="Shredded Pork Ear Salad" data-zh="红油耳丝">Shredded Pork Ear Salad</h4>
+                            <p class="desc" data-en="Shredded braised pork ear, soy sauce, chili oil" data-zh="卤猪耳撕丝，酱油，辣椒油">Shredded braised pork ear, soy sauce, chili oil</p>
+                            <p class="price"></p>
+                        </div>
+
+                        <div class="menu-item">
+                            <div class="menu-image" style="background-image: url('images/appetizer-meat-5.jpg');"></div>
+                            <h4 data-en="Shredded Beef Tripe Salad" data-zh="红油牛百叶">Shredded Beef Tripe Salad</h4>
+                            <p class="desc" data-en="Sliced braised beef tripe, chili oil, mustard dressing, peanuts, bell peppers, onion" data-zh="卤牛百叶切丝，辣油、芥末汁、花生、青椒、洋葱">Sliced braised beef tripe, chili oil, mustard dressing, peanuts, bell peppers, onion</p>
+                            <p class="price"></p>
+                        </div>
+
+                        <div class="menu-item">
+                            <div class="menu-image" style="background-image: url('images/appetizer-meat-6.jpg');"></div>
+                            <h4 data-en="Sichuan Chili & Pepper Drizzle Chicken" data-zh="椒麻口水鸡">Sichuan Chili & Pepper Drizzle Chicken</h4>
+                            <p class="desc" data-en="Sliced chicken, chili oil, Sichuan peppercorn sauce" data-zh="白切鸡片，辣油，花椒酱">Sliced chicken, chili oil, Sichuan peppercorn sauce</p>
+                            <p class="price"></p>
+                        </div>
                     </div>
                 </section>
 
-                <!-- Salad -->
-                <section id="salad" class="menu-category-section">
-                    <h2>Salad</h2>
+                <!-- Appetizers – Vegetables (moved from Salad) -->
+                <section id="appetizers-vegetables" class="menu-category-section">
+                    <h2 data-en="Appetizers – Vegetables" data-zh="开胃小菜">Appetizers – Vegetables</h2>
                     <div class="menu-grid">
+                     
                         <div class="menu-item">
-                            <div class="menu-image" style="background-image: url('images/salad-1.jpg');"></div>
-                            <h4>Green Papaya Salad</h4>
-                            <p class="price">$9.99</p>
+                            <div class="menu-image" style="background-image: url('images/vege-1.jpg');"></div>
+                            <h4 data-en="Chinese Cucumber Salad" data-zh="清拌黄瓜">Chinese Cucumber Salad</h4>
+                            <p class="desc" data-en="Smashed cucumber, cilantro, garlic, white vinegar" data-zh="拍黄瓜、香菜、蒜、白醋">Smashed cucumber, cilantro, garlic, white vinegar</p>
+                            <p class="price"></p>
                         </div>
+
                         <div class="menu-item">
-                            <div class="menu-image" style="background-image: url('images/salad-2.jpg');"></div>
-                            <h4>Seaweed Salad</h4>
-                            <p class="price">$8.99</p>
+                            <div class="menu-image" style="background-image: url('images/vege-2.jpg');"></div>
+                            <h4 data-en="Spiral Cucumber Salad" data-zh="蓑衣黄瓜">Spiral Cucumber Salad</h4>
+                            <p class="desc" data-en="Spiral cucumber, soy sauce, vinegar, garlic, chili oil" data-zh="蓑衣黄瓜，酱油、醋、蒜、辣椒油">Spiral cucumber, soy sauce, vinegar, garlic, chili oil</p>
+                            <p class="price"></p>
                         </div>
+
                         <div class="menu-item">
-                            <div class="menu-image" style="background-image: url('images/salad-3.jpg');"></div>
-                            <h4>Beef Salad</h4>
-                            <p class="price">$12.99</p>
+                            <div class="menu-image" style="background-image: url('images/vege-3.jpg');"></div>
+                            <h4 data-en="Sesame Sauce Spinach" data-zh="麻汁菠菜">Sesame Sauce Spinach</h4>
+                            <p class="desc" data-en="Blanched spinach, sesame sauce" data-zh="焯菠菜，麻酱">Blanched spinach, sesame sauce</p>
+                            <p class="price"></p>
                         </div>
+
                         <div class="menu-item">
-                            <div class="menu-image" style="background-image: url('images/salad-4.jpg');"></div>
-                            <h4>Mango Chicken Salad</h4>
-                            <p class="price">$11.99</p>
+                            <div class="menu-image" style="background-image: url('images/vege-4.jpg');"></div>
+                            <h4 data-en="Shredded Potato Salad with Red-Oil" data-zh="红油土豆丝">Shredded Potato Salad with Red-Oil</h4>
+                            <p class="desc" data-en="Shredded potato, chili oil, cilantro" data-zh="土豆丝、辣油、香菜">Shredded potato, chili oil, cilantro</p>
+                            <p class="price"></p>
                         </div>
+
                         <div class="menu-item">
-                            <div class="menu-image" style="background-image: url('images/salad-5.jpg');"></div>
-                            <h4>Squid Salad</h4>
-                            <p class="price">$13.99</p>
+                            <div class="menu-image" style="background-image: url('images/vege-5.jpg');"></div>
+                            <h4 data-en="Black Wood-Ear Salad with Dark Vinegar Sauce" data-zh="老醋木耳">Black Wood-Ear Salad with Dark Vinegar Sauce</h4>
+                            <p class="desc" data-en="Wood ear mushroom, black vinegar, bell peppers" data-zh="木耳、老醋、青椒">Wood ear mushroom, black vinegar, bell peppers</p>
+                            <p class="price"></p>
                         </div>
+
                         <div class="menu-item">
-                            <div class="menu-image" style="background-image: url('images/salad-6.jpg');"></div>
-                            <h4>Cucumber Salad</h4>
-                            <p class="price">$7.99</p>
+                            <div class="menu-image" style="background-image: url('images/vege-6.jpg');"></div>
+                            <h4 data-en="Fried Peanuts with Dark Vinegar Sauce" data-zh="老醋花生">Fried Peanuts with Dark Vinegar Sauce</h4>
+                            <p class="desc" data-en="Fried peanuts, black vinegar, bell peppers" data-zh="炸花生、老醋、青椒">Fried peanuts, black vinegar, bell peppers</p>
+                            <p class="price"></p>
                         </div>
+
                         <div class="menu-item">
-                            <div class="menu-image" style="background-image: url('images/salad-7.jpg');"></div>
-                            <h4>Mixed Vegetable Salad</h4>
-                            <p class="price">$8.99</p>
+                            <div class="menu-image" style="background-image: url('images/vege-7.jpg');"></div>
+                            <h4 data-en="North Chinese Tofu Salad" data-zh="皮蛋豆腐">North Chinese Tofu Salad</h4>
+                            <p class="desc" data-en="Soft tofu, preserved egg, bell peppers, black vinegar" data-zh="嫩豆腐、皮蛋、青椒、老醋">Soft tofu, preserved egg, bell peppers, black vinegar</p>
+                            <p class="price"></p>
                         </div>
+
                         <div class="menu-item">
-                            <div class="menu-image" style="background-image: url('images/salad-8.jpg');"></div>
-                            <h4>Shrimp Salad</h4>
-                            <p class="price">$12.99</p>
+                            <div class="menu-image" style="background-image: url('images/vege-8.jpg');"></div>
+                            <h4 data-en="Crispy jelly Fish Salad" data-zh="脆拌海蜇皮">Crispy jelly Fish Salad</h4>
+                            <p class="desc" data-en="Shredded jellyfish, cucumber, Chinese cabbage, black vinegar" data-zh="海蜇丝、黄瓜、大白菜、老醋">Shredded jellyfish, cucumber, Chinese cabbage, black vinegar</p>
+                            <p class="price"></p>
                         </div>
+
                         <div class="menu-item">
-                            <div class="menu-image" style="background-image: url('images/salad-9.jpg');"></div>
-                            <h4>Tofu Salad</h4>
-                            <p class="price">$9.99</p>
+                            <div class="menu-image" style="background-image: url('images/vege-9.jpg');"></div>
+                            <h4 data-en="Salad Platter" data-zh="小菜拼盘">Salad Platter</h4>
+                            <p class="desc" data-en="Assorted cold dishes (vegetable and meat) pick by chef" data-zh="蔬菜与肉类小拼盘，由厨师搭配">Assorted cold dishes (vegetable and meat) pick by chef</p>
+                            <p class="price"></p>
                         </div>
+
                         <div class="menu-item">
-                            <div class="menu-image" style="background-image: url('images/salad-10.jpg');"></div>
-                            <h4>Fish Salad</h4>
-                            <p class="price">$13.99</p>
+                            <div class="menu-image" style="background-image: url('images/vege-10.jpg');"></div>
+                            <h4 data-en="Blanched Seasonal Vege" data-zh="烫时蔬">Blanched Seasonal Vege</h4>
+                            <p class="desc" data-en="Blanched seasonal vegetables, lightly seasoned" data-zh="烫时蔬，清淡调味">Blanched seasonal vegetables, lightly seasoned</p>
+                            <p class="price"></p>
                         </div>
                     </div>
                 </section>
 
-                <!-- Noodle -->
-                <section id="noodle" class="menu-category-section">
-                    <h2>Noodle</h2>
-                    <div class="menu-grid">
-                        <div class="menu-item">
-                            <div class="menu-image" style="background-image: url('images/noodle-1.jpg');"></div>
-                            <h4>Pad Thai</h4>
-                            <p class="price">$11.99</p>
-                        </div>
-                        <div class="menu-item">
-                            <div class="menu-image" style="background-image: url('images/noodle-2.jpg');"></div>
-                            <h4>Dan Dan Noodles</h4>
-                            <p class="price">$10.99</p>
-                        </div>
-                        <div class="menu-item">
-                            <div class="menu-image" style="background-image: url('images/noodle-3.jpg');"></div>
-                            <h4>Ramen</h4>
-                            <p class="price">$13.99</p>
-                        </div>
-                        <div class="menu-item">
-                            <div class="menu-image" style="background-image: url('images/noodle-4.jpg');"></div>
-                            <h4>Chow Mein</h4>
-                            <p class="price">$10.99</p>
-                        </div>
-                        <div class="menu-item">
-                            <div class="menu-image" style="background-image: url('images/noodle-5.jpg');"></div>
-                            <h4>Pad See Ew</h4>
-                            <p class="price">$11.99</p>
-                        </div>
-                        <div class="menu-item">
-                            <div class="menu-image" style="background-image: url('images/noodle-6.jpg');"></div>
-                            <h4>Laksa</h4>
-                            <p class="price">$12.99</p>
-                        </div>
-                        <div class="menu-item">
-                            <div class="menu-image" style="background-image: url('images/noodle-7.jpg');"></div>
-                            <h4>Singapore Mei Fun</h4>
-                            <p class="price">$11.99</p>
-                        </div>
-                        <div class="menu-item">
-                            <div class="menu-image" style="background-image: url('images/noodle-8.jpg');"></div>
-                            <h4>Phở</h4>
-                            <p class="price">$10.99</p>
-                        </div>
-                        <div class="menu-item">
-                            <div class="menu-image" style="background-image: url('images/noodle-9.jpg');"></div>
-                            <h4>Lo Mein</h4>
-                            <p class="price">$10.99</p>
-                        </div>
-                        <div class="menu-item">
-                            <div class="menu-image" style="background-image: url('images/noodle-10.jpg');"></div>
-                            <h4>Udon</h4>
-                            <p class="price">$11.99</p>
-                        </div>
-                    </div>
-                </section>
-
-                <!-- Rice -->
-                <section id="rice" class="menu-category-section">
-                    <h2>Rice</h2>
-                    <div class="menu-grid">
-                        <div class="menu-item">
-                            <div class="menu-image" style="background-image: url('images/rice-1.jpg');"></div>
-                            <h4>Chicken Fried Rice</h4>
-                            <p class="price">$10.99</p>
-                        </div>
-                        <div class="menu-item">
-                            <div class="menu-image" style="background-image: url('images/rice-2.jpg');"></div>
-                            <h4>Shrimp Fried Rice</h4>
-                            <p class="price">$12.99</p>
-                        </div>
-                        <div class="menu-item">
-                            <div class="menu-image" style="background-image: url('images/rice-3.jpg');"></div>
-                            <h4>Beef Fried Rice</h4>
-                            <p class="price">$12.99</p>
-                        </div>
-                        <div class="menu-item">
-                            <div class="menu-image" style="background-image: url('images/rice-4.jpg');"></div>
-                            <h4>Ling Fried Rice</h4>
-                            <p class="price">$13.99</p>
-                        </div>
-                        <div class="menu-item">
-                            <div class="menu-image" style="background-image: url('images/rice-5.jpg');"></div>
-                            <h4>Pineapple Fried Rice</h4>
-                            <p class="price">$12.99</p>
-                        </div>
-                        <div class="menu-item">
-                            <div class="menu-image" style="background-image: url('images/rice-6.jpg');"></div>
-                            <h4>Vegetable Fried Rice</h4>
-                            <p class="price">$9.99</p>
-                        </div>
-                        <div class="menu-item">
-                            <div class="menu-image" style="background-image: url('images/rice-7.jpg');"></div>
-                            <h4>Crab Fried Rice</h4>
-                            <p class="price">$13.99</p>
-                        </div>
-                        <div class="menu-item">
-                            <div class="menu-image" style="background-image: url('images/rice-8.jpg');"></div>
-                            <h4>Squid Ink Fried Rice</h4>
-                            <p class="price">$12.99</p>
-                        </div>
-                        <div class="menu-item">
-                            <div class="menu-image" style="background-image: url('images/rice-9.jpg');"></div>
-                            <h4>Green Curry Rice</h4>
-                            <p class="price">$11.99</p>
-                        </div>
-                        <div class="menu-item">
-                            <div class="menu-image" style="background-image: url('images/rice-10.jpg');"></div>
-                            <h4>Jasmine Rice Bowl</h4>
-                            <p class="price">$5.99</p>
-                        </div>
-                    </div>
-                </section>
-
-                <!-- Dumplings -->
-                <section id="dumplings" class="menu-category-section">
-                    <h2>Dumplings</h2>
+                <!-- Handmade Dumplings & Wontons (moved from Dumplings) -->
+                <section id="handmade-dumplings" class="menu-category-section">
+                    <h2 data-en="Handmade Dumplings & Wontons" data-zh="手工水饺 & 馄饨">Handmade Dumplings & Wontons</h2>
                     <div class="menu-grid">
                         <div class="menu-item">
                             <div class="menu-image" style="background-image: url('images/dumpling-1.jpg');"></div>
@@ -366,45 +390,250 @@ by HAND</p>
                         </div>
                         <div class="menu-item">
                             <div class="menu-image" style="background-image: url('images/dumpling-4.jpg');"></div>
-                            <h4>Chicken Dumplings</h4>
-                            <p class="price">$7.99</p>
+                            <h4 data-en="Shrimp & Chive & Pork Dumplings" data-zh="韭菜虾仁水饺">Shrimp & Chive & Pork Dumplings</h4>
+                            <p class="price"></p>
                         </div>
+
                         <div class="menu-item">
                             <div class="menu-image" style="background-image: url('images/dumpling-5.jpg');"></div>
-                            <h4>Crab Dumplings</h4>
-                            <p class="price">$9.99</p>
+                            <h4 data-en="Onion & Beef Dumplings" data-zh="牛肉洋葱水饺">Onion & Beef Dumplings</h4>
+                            <p class="price"></p>
                         </div>
+
                         <div class="menu-item">
                             <div class="menu-image" style="background-image: url('images/dumpling-6.jpg');"></div>
-                            <h4>Seafood Dumplings</h4>
-                            <p class="price">$9.99</p>
+                            <h4 data-en="Vegetarian Dumplings (Mushroom & Tofu & Bok Choy)" data-zh="素馅水饺(蘑菇，豆干，上海菜">Vegetarian Dumplings (Mushroom & Tofu & Bok Choy)</h4>
+                            <p class="price"></p>
                         </div>
+
                         <div class="menu-item">
                             <div class="menu-image" style="background-image: url('images/dumpling-7.jpg');"></div>
-                            <h4>Truffle Dumplings</h4>
+                            <h4 data-en="Chinese Cabbage & Pork Dumplings" data-zh="白菜猪肉水饺">Chinese Cabbage & Pork Dumplings</h4>
+                            <p class="price"></p>
+                        </div>
+
+                        <div class="menu-item">
+                            <div class="menu-image" style="background-image: url('images/dumpling-8.jpg');"></div>
+                            <h4 data-en="Lamb & Carrot Dumplings" data-zh="羊肉胡萝卜水饺">Lamb & Carrot Dumplings</h4>
+                            <p class="price"></p>
+                        </div>
+
+                        <div class="menu-item">
+                            <div class="menu-image" style="background-image: url('images/wonton-1.jpg');"></div>
+                            <h4 data-en="Sour & Spicy Wonton Soup" data-zh="酸汤馄饨">Sour & Spicy Wonton Soup</h4>
+                            <p class="price"></p>
+                        </div>
+
+                        <div class="menu-item">
+                            <div class="menu-image" style="background-image: url('images/wonton-2.jpg');"></div>
+                            <h4 data-en="Duck Soup Wonton" data-zh="鸭汤馄炖">Duck Soup Wonton</h4>
+                            <p class="price"></p>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Pan-Fried Buns (placeholder) -->
+                <section id="pan-fried-buns" class="menu-category-section">
+                    <h2 data-en="Pan-Fried Buns" data-zh="生煎包">Pan-Fried Buns</h2>
+                    <div class="menu-grid">
+                        <div class="menu-item">
+                            <div class="menu-image" style="background-image: url('images/bun-1.jpg');"></div>
+                            <h4 data-en="Shrimp, Pork & Chive Buns" data-zh="鲜虾韭菜猪肉生煎包">Shrimp, Pork & Chive Buns</h4>
+                            <p class="price"></p>
+                        </div>
+
+                        <div class="menu-item">
+                            <div class="menu-image" style="background-image: url('images/bun-2.jpg');"></div>
+                            <h4 data-en="Beef & Onion Buns" data-zh="牛肉洋葱生煎包">Beef & Onion Buns</h4>
+                            <p class="price"></p>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Noodles (moved from Noodle) -->
+                <section id="noodles" class="menu-category-section">
+                    <h2 data-en="Noodles" data-zh="西安手扯面（干拌）">Noodles</h2>
+                    <div class="menu-grid">
+                        <div class="menu-item">
+                            <div class="menu-image" style="background-image: url('images/noodle-1.jpg');"></div>
+                            <h4>Pad Thai</h4>
+                            <p class="price">$11.99</p>
+                        </div>
+                        <div class="menu-item">
+                            <div class="menu-image" style="background-image: url('images/noodle-2.jpg');"></div>
+                            <h4>Dan Dan Noodles</h4>
                             <p class="price">$10.99</p>
                         </div>
                         <div class="menu-item">
-                            <div class="menu-image" style="background-image: url('images/dumpling-8.jpg');"></div>
-                            <h4>Shumai</h4>
-                            <p class="price">$7.99</p>
+                            <div class="menu-image" style="background-image: url('images/noodle-3.jpg');"></div>
+                            <h4>Ramen</h4>
+                            <p class="price">$13.99</p>
                         </div>
                         <div class="menu-item">
-                            <div class="menu-image" style="background-image: url('images/dumpling-9.jpg');"></div>
-                            <h4>Chive Dumplings</h4>
-                            <p class="price">$7.99</p>
+                            <div class="menu-image" style="background-image: url('images/noodle-4.jpg');"></div>
+                            <h4 data-en="Spicy Cumin Lamb Noodle" data-zh="孜然羊肉面">Spicy Cumin Lamb Noodle</h4>
+                            <p class="desc" data-en="Hand-pulled noodles, sliced cumin lamb" data-zh="手工拉面，孜然羊肉片">Hand-pulled noodles, sliced cumin lamb</p>
+                            <p class="price"></p>
+                        </div>
+
+                        <div class="menu-item">
+                            <div class="menu-image" style="background-image: url('images/noodle-5.jpg');"></div>
+                            <h4 data-en="Spicy Hot Oil Noodle" data-zh="油泼面（加腊汁肉$3.50）">Spicy Hot Oil Noodle</h4>
+                            <p class="desc" data-en="Hand-pulled noodles, chili oil, garlic, scallion" data-zh="手工拉面，油泼辣子，蒜，葱">Hand-pulled noodles, chili oil, garlic, scallion</p>
+                            <p class="price"></p>
+                        </div>
+
+                        <div class="menu-item">
+                            <div class="menu-image" style="background-image: url('images/noodle-6.jpg');"></div>
+                            <h4 data-en="Spicy Hot-Oil Noodle with Tomato & Fried Egg Sauce" data-zh="西红柿鸡蛋油泼面">Spicy Hot-Oil Noodle with Tomato & Fried Egg Sauce</h4>
+                            <p class="desc" data-en="Hand-pulled noodles, chili oil, garlic, scallion, tomato, egg" data-zh="手工拉面，油泼辣子，蒜，葱，西红柿，鸡蛋">Hand-pulled noodles, chili oil, garlic, scallion, tomato, egg</p>
+                            <p class="price"></p>
+                        </div>
+
+                        <div class="menu-item">
+                            <div class="menu-image" style="background-image: url('images/noodle-7.jpg');"></div>
+                            <h4 data-en="Sweet & Chili Chicken Noodle" data-zh="鱼香鸡块面">Sweet & Chili Chicken Noodle</h4>
+                            <p class="desc" data-en="Hand-pulled noodles, chicken, sweet chili sauce" data-zh="手工拉面，鸡块，鱼香甜辣酱">Hand-pulled noodles, chicken, sweet chili sauce</p>
+                            <p class="price"></p>
+                        </div>
+
+                        <div class="menu-item">
+                            <div class="menu-image" style="background-image: url('images/noodle-8.jpg');"></div>
+                            <h4 data-en="Pork \"Zha-Jiang\" Noodle" data-zh="炸酱面">Pork "Zha-Jiang" Noodle</h4>
+                            <p class="desc" data-en="Hand-pulled noodles, diced pork, soybean paste" data-zh="手工拉面，猪肉丁，炸酱">Hand-pulled noodles, diced pork, soybean paste</p>
+                            <p class="price"></p>
+                        </div>
+
+                        <div class="menu-item">
+                            <div class="menu-image" style="background-image: url('images/noodle-9.jpg');"></div>
+                            <h4 data-en="Pickled Chili Noodles with Pork Intestine & Tripe" data-zh="剁椒酸菜肠肚面">Pickled Chili Noodles with Pork Intestine & Tripe</h4>
+                            <p class="desc" data-en="Hand-pulled noodles, pickled chili, sour cabbage, pork intestine, tripe" data-zh="手工拉面，剁椒酸菜，猪肠，肚">Hand-pulled noodles, pickled chili, sour cabbage, pork intestine, tripe</p>
+                            <p class="price"></p>
+                        </div>
+
+                        <div class="menu-item">
+                            <div class="menu-image" style="background-image: url('images/noodle-10.jpg');"></div>
+                            <h4 data-en="The Big Bowl Noodle (For Two)" data-zh="大碗三拌面（双人）">The Big Bowl Noodle (For Two)</h4>
+                            <p class="desc" data-en="Hand-pulled noodles, diced pork, tomato, egg, chili oil, garlic, scallion" data-zh="手工拉面，猪肉丁，西红柿，鸡蛋，油泼辣子，蒜，葱">Hand-pulled noodles, diced pork, tomato, egg, chili oil, garlic, scallion</p>
+                            <p class="price"></p>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Noodle Soup -->
+                <section id="noodle-soup" class="menu-category-section">
+                    <h2 data-en="Noodle Soup" data-zh="西安手扯面（汤面）">Noodle Soup</h2>
+                    <div class="menu-grid">
+                        <div class="menu-item">
+                            <div class="menu-image" style="background-image: url('images/noodle-soup-1.jpg');"></div>
+                            <h4 data-en="Stewed Beef Noodle Soup" data-zh="牛腩面">Stewed Beef Noodle Soup</h4>
+                            <p class="desc" data-en="Hand-pulled noodles, beef broth, braised beef" data-zh="手工拉面，牛骨高汤，红烧牛腩">Hand-pulled noodles, beef broth, braised beef</p>
+                            <p class="price"></p>
+                        </div>
+
+                        <div class="menu-item">
+                            <div class="menu-image" style="background-image: url('images/noodle-soup-2.jpg');"></div>
+                            <h4 data-en="Deluxe Beef Trio Noodle Soup" data-zh="牛三宝面">Deluxe Beef Trio Noodle Soup</h4>
+                            <p class="desc" data-en="Hand-pulled noodles, beef broth, braised beef, beef tendon, beef tripe" data-zh="手工拉面，牛骨高汤，牛腩，牛筋，牛肚">Hand-pulled noodles, beef broth, braised beef, beef tendon, beef tripe</p>
+                            <p class="price"></p>
+                        </div>
+
+                        <div class="menu-item">
+                            <div class="menu-image" style="background-image: url('images/noodle-soup-3.jpg');"></div>
+                            <h4 data-en="Sour & Spicy Noodle Soup" data-zh="酸汤面（加牛腩$4.50）">Sour & Spicy Noodle Soup</h4>
+                            <p class="desc" data-en="Hand-pulled noodles, sour and spicy broth, seaweed, dried shrimp, dark vinegar" data-zh="手工拉面，酸辣汤底，海带，虾皮，陈醋">Hand-pulled noodles, sour and spicy broth, seaweed, dried shrimp, dark vinegar</p>
+                            <p class="price"></p>
+                        </div>
+
+                        <div class="menu-item">
+                            <div class="menu-image" style="background-image: url('images/noodle-soup-4.jpg');"></div>
+                            <h4 data-en="Stewed Lamb Noodle Soup" data-zh="羊汤烩面">Stewed Lamb Noodle Soup</h4>
+                            <p class="desc" data-en="Hand-pulled noodles, lamb broth, braised lamb" data-zh="手工拉面，羊汤高汤，红烧羊肉">Hand-pulled noodles, lamb broth, braised lamb</p>
+                            <p class="price"></p>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Rice Bowls & Fried Rice (moved from Rice) -->
+                <section id="rice-bowls" class="menu-category-section">
+                    <h2 data-en="Rice Bowls & Fried Rice" data-zh="盖饭 & 炒饭">Rice Bowls & Fried Rice</h2>
+                    <div class="menu-grid">
+                        <div class="menu-item">
+                            <div class="menu-image" style="background-image: url('images/rice-1.jpg');"></div>
+                            <h4>Chicken Fried Rice</h4>
+                            <p class="price">$10.99</p>
                         </div>
                         <div class="menu-item">
-                            <div class="menu-image" style="background-image: url('images/dumpling-10.jpg');"></div>
-                            <h4>Pork & Chive Dumplings</h4>
-                            <p class="price">$8.99</p>
+                            <div class="menu-image" style="background-image: url('images/rice-2.jpg');"></div>
+                            <h4>Shrimp Fried Rice</h4>
+                            <p class="price">$12.99</p>
+                        </div>
+                        <div class="menu-item">
+                            <div class="menu-image" style="background-image: url('images/rice-3.jpg');"></div>
+                            <h4 data-en="Sweet & Sour Pork Ribs Rice Bowl" data-zh="糖醋排骨盖饭">Sweet & Sour Pork Ribs Rice Bowl</h4>
+                            <p class="desc" data-en="Pork ribs, sweet and sour black vinegar sauce, steamed rice, seasonal vegetables" data-zh="排骨，糖醋黑醋酱，白饭，时令蔬菜">Pork ribs, sweet and sour black vinegar sauce, steamed rice, seasonal vegetables</p>
+                            <p class="price"></p>
+                        </div>
+
+                        <div class="menu-item">
+                            <div class="menu-image" style="background-image: url('images/rice-4.jpg');"></div>
+                            <h4 data-en="Sweet & Chili Chicken Rice Bowl" data-zh="鱼香鸡块盖饭">Sweet & Chili Chicken Rice Bowl</h4>
+                            <p class="desc" data-en="Chicken, sweet and chili sauce, steamed rice, seasonal vegetables" data-zh="鸡肉，鱼香甜辣酱，白饭，时令蔬菜">Chicken, sweet and chili sauce, steamed rice, seasonal vegetables</p>
+                            <p class="price"></p>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Soups (moved from Soup) -->
+                <section id="soups" class="menu-category-section">
+                    <h2 data-en="Soups" data-zh="汤品">Soups</h2>
+                    <div class="menu-grid">
+                        <div class="menu-item">
+                            <div class="menu-image" style="background-image: url('images/soup-1.jpg');"></div>
+                            <h4>Tom Yum Soup</h4>
+                            <p class="price">$9.99</p>
+                        </div>
+                        <div class="menu-item">
+                            <div class="menu-image" style="background-image: url('images/soup-2.jpg');"></div>
+                            <h4>Miso Soup</h4>
+                            <p class="price">$5.99</p>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Desserts (moved from Dessert) -->
+                <section id="desserts" class="menu-category-section">
+                    <h2 data-en="Desserts" data-zh="甜品">Desserts</h2>
+                    <div class="menu-grid">
+                        <div class="menu-item">
+                            <div class="menu-image" style="background-image: url('images/dessert-1.jpg');"></div>
+                            <h4>Matcha Tiramisu</h4>
+                            <p class="price">$6.99</p>
+                        </div>
+                        <div class="menu-item">
+                            <div class="menu-image" style="background-image: url('images/dessert-2.jpg');"></div>
+                            <h4>Mochi Ice Cream</h4>
+                            <p class="price">$5.99</p>
+                        </div>
+                        <div class="menu-item">
+                            <div class="menu-image" style="background-image: url('images/dessert-3.jpg');"></div>
+                            <h4 data-en="Honey Fried Doughnut Twists" data-zh="蜂蜜大麻花（搭配奶盖）">Honey Fried Doughnut Twists</h4>
+                            <p class="desc" data-en="Fried dough, honey, milk, cheese foam" data-zh="油炸面团，蜂蜜，牛奶，奶盖">Fried dough, honey, milk, cheese foam</p>
+                            <p class="price"></p>
+                        </div>
+
+                        <div class="menu-item">
+                            <div class="menu-image" style="background-image: url('images/dessert-4.jpg');"></div>
+                            <h4 data-en="Fresh Mango Sago Dessert" data-zh="芒果西米露">Fresh Mango Sago Dessert</h4>
+                            <p class="desc" data-en="Mango, seasonal fruit, coconut jelly, sago, coconut milk" data-zh="芒果，时令水果，椰果，西米，椰奶">Mango, seasonal fruit, coconut jelly, sago, coconut milk</p>
+                            <p class="price"></p>
                         </div>
                     </div>
                 </section>
 
                 <!-- Hot Pot -->
                 <section id="hotpot" class="menu-category-section">
-                    <h2>Hot Pot</h2>
+                    <h2 data-en="Hot Pot" data-zh="火锅">Hot Pot</h2>
                     <div class="menu-grid">
                         <div class="menu-item">
                             <div class="menu-image" style="background-image: url('images/hotpot-1.jpg');"></div>
@@ -430,6 +659,49 @@ by HAND</p>
                             <div class="menu-image" style="background-image: url('images/hotpot-5.jpg');"></div>
                             <h4>Beef Hot Pot</h4>
                             <p class="price">$22.99</p>
+                        </div>
+                        <div class="menu-item">
+                            <div class="menu-image" style="background-image: url('images/hotpot-6.jpg');"></div>
+                            <h4 data-en="Duck Soup Hotpot" data-zh="老鸭汤火锅">Duck Soup Hotpot</h4>
+                            <p class="desc" data-en="The Duck Soup Hot Pot is a special type of Chinese cuisine. The duck has been slowly cooked for three hours, which extract all the nutrition into the broth. When you start the meal, always taste the original soup first, before putting other ingredients in." data-zh="经三小时的温火熬煮，汤计澄请香醇，滋味鲜美，鸭脂黄亮，肉酥烂鲜醇，一种集美食养生，传统滋补为一体的大众诮费型汤锅食品，老鸭汤老少皆宜，春頁秋冬都适合。">The Duck Soup Hot Pot is a special type of Chinese cuisine. The duck has been slowly cooked for three hours, which extract all the nutrition into the broth. When you start the meal, always taste the original soup first, before putting other ingredients in.
+                            </p>
+                            <p class="price"></p>
+                        </div>
+
+                        <div class="menu-item">
+                            <div class="menu-image" style="background-image: url('images/hotpot-7.jpg');"></div>
+                            <h4 data-en="Prime Lamb Hotpot" data-zh="羊肉煲火锅">Prime Lamb Hotpot</h4>
+                            <p class="desc" data-en="The Prime Lamb Hotpot combine the traditional Xi'an flavor into a new hotpot style. Thirty kinds of Chinese herbs and spices are cooked with the lamb and bones for three hours, which bring the aroma to a next level. In Chinese Culture, people believe that lamb will get human body warmer, which makes Prime Lamb Hotpot the best choice in winter." data-zh="将切块黑山羊与羊骨一起投入大锅里熬汤．并加入十余种中草药作出调料，熬煮三小时，将羊骨和羊肉中的精华全部带出，羊肉汤甘温、能温阳散寒补益气，血强壮身体。">The Prime Lamb Hotpot combine the traditional Xi'an flavor into a new hotpot style. Thirty kinds of Chinese herbs and spices are cooked with the lamb and bones for three hours, which bring the aroma to a next level. In Chinese Culture, people believe that lamb will get human body warmer, which makes Prime Lamb Hotpot the best choice in winter.
+                            </p>
+                            <p class="price"></p>
+                        </div>
+
+                        <div class="menu-item">
+                            <div class="menu-image" style="background-image: url('images/hotpot-8.jpg');"></div>
+                            <h4 data-en="Signature Duck Hotpot for One" data-zh="鸭肉锅单人锅">Signature Duck Hotpot for One</h4>
+                            <p class="desc" data-en="Includes single hot pot platter and one hand-pulled noodle" data-zh="含一份单人火锅拼盘和扯面一根">Includes single hot pot platter and one hand-pulled noodle</p>
+                            <p class="price"></p>
+                        </div>
+
+                        <div class="menu-item">
+                            <div class="menu-image" style="background-image: url('images/hotpot-9.jpg');"></div>
+                            <h4 data-en="Prime Lamb Hotpot for One" data-zh="羊肉锅单人锅">Prime Lamb Hotpot for One</h4>
+                            <p class="desc" data-en="Includes single hot pot platter and one hand-pulled noodle" data-zh="含一份单人火锅拼盘和扯面一根">Includes single hot pot platter and one hand-pulled noodle</p>
+                            <p class="price"></p>
+                        </div>
+
+                        <div class="menu-item">
+                            <div class="menu-image" style="background-image: url('images/hotpot-10.jpg');"></div>
+                            <h4 data-en="Beef Hotpot for One" data-zh="牛肉锅单人锅">Beef Hotpot for One</h4>
+                            <p class="desc" data-en="Includes single hot pot platter and one hand-pulled noodle" data-zh="含一份单人火锅拼盘和扯面一根">Includes single hot pot platter and one hand-pulled noodle</p>
+                            <p class="price"></p>
+                        </div>
+
+                        <div class="menu-item">
+                            <div class="menu-image" style="background-image: url('images/hotpot-11.jpg');"></div>
+                            <h4 data-en="Lamb-Za Hot Pot for One" data-zh="羊杂锅单人锅">Lamb-Za Hot Pot for One</h4>
+                            <p class="desc" data-en="Includes single hot pot platter and one hand-pulled noodle" data-zh="含一份单人火锅拼盘和扯面一根">Includes single hot pot platter and one hand-pulled noodle</p>
+                            <p class="price"></p>
                         </div>
                         <div class="menu-item">
                             <div class="menu-image" style="background-image: url('images/hotpot-6.jpg');"></div>
@@ -459,233 +731,7 @@ by HAND</p>
                     </div>
                 </section>
 
-                <!-- Soup -->
-                <section id="soup" class="menu-category-section">
-                    <h2>Soup</h2>
-                    <div class="menu-grid">
-                        <div class="menu-item">
-                            <div class="menu-image" style="background-image: url('images/soup-1.jpg');"></div>
-                            <h4>Tom Yum Soup</h4>
-                            <p class="price">$9.99</p>
-                        </div>
-                        <div class="menu-item">
-                            <div class="menu-image" style="background-image: url('images/soup-2.jpg');"></div>
-                            <h4>Miso Soup</h4>
-                            <p class="price">$5.99</p>
-                        </div>
-                        <div class="menu-item">
-                            <div class="menu-image" style="background-image: url('images/soup-3.jpg');"></div>
-                            <h4>Hot & Sour Soup</h4>
-                            <p class="price">$7.99</p>
-                        </div>
-                        <div class="menu-item">
-                            <div class="menu-image" style="background-image: url('images/soup-4.jpg');"></div>
-                            <h4>Wonton Soup</h4>
-                            <p class="price">$8.99</p>
-                        </div>
-                        <div class="menu-item">
-                            <div class="menu-image" style="background-image: url('images/soup-5.jpg');"></div>
-                            <h4>Seafood Soup</h4>
-                            <p class="price">$11.99</p>
-                        </div>
-                        <div class="menu-item">
-                            <div class="menu-image" style="background-image: url('images/soup-6.jpg');"></div>
-                            <h4>Egg Drop Soup</h4>
-                            <p class="price">$5.99</p>
-                        </div>
-                        <div class="menu-item">
-                            <div class="menu-image" style="background-image: url('images/soup-7.jpg');"></div>
-                            <h4>Chicken Noodle Soup</h4>
-                            <p class="price">$9.99</p>
-                        </div>
-                        <div class="menu-item">
-                            <div class="menu-image" style="background-image: url('images/soup-8.jpg');"></div>
-                            <h4>Coconut Curry Soup</h4>
-                            <p class="price">$10.99</p>
-                        </div>
-                        <div class="menu-item">
-                            <div class="menu-image" style="background-image: url('images/soup-9.jpg');"></div>
-                            <h4>Pork Rib Soup</h4>
-                            <p class="price">$10.99</p>
-                        </div>
-                        <div class="menu-item">
-                            <div class="menu-image" style="background-image: url('images/soup-10.jpg');"></div>
-                            <h4>Vegetable Soup</h4>
-                            <p class="price">$6.99</p>
-                        </div>
-                    </div>
-                </section>
-
-                <!-- Dessert -->
-                <section id="dessert" class="menu-category-section">
-                    <h2>Dessert</h2>
-                    <div class="menu-grid">
-                        <div class="menu-item">
-                            <div class="menu-image" style="background-image: url('images/dessert-1.jpg');"></div>
-                            <h4>Matcha Tiramisu</h4>
-                            <p class="price">$6.99</p>
-                        </div>
-                        <div class="menu-item">
-                            <div class="menu-image" style="background-image: url('images/dessert-2.jpg');"></div>
-                            <h4>Mochi Ice Cream</h4>
-                            <p class="price">$5.99</p>
-                        </div>
-                        <div class="menu-item">
-                            <div class="menu-image" style="background-image: url('images/dessert-3.jpg');"></div>
-                            <h4>Black Sesame Panna Cotta</h4>
-                            <p class="price">$6.99</p>
-                        </div>
-                        <div class="menu-item">
-                            <div class="menu-image" style="background-image: url('images/dessert-4.jpg');"></div>
-                            <h4>Mango Sticky Rice</h4>
-                            <p class="price">$7.99</p>
-                        </div>
-                        <div class="menu-item">
-                            <div class="menu-image" style="background-image: url('images/dessert-5.jpg');"></div>
-                            <h4>Passion Fruit Sorbet</h4>
-                            <p class="price">$5.99</p>
-                        </div>
-                        <div class="menu-item">
-                            <div class="menu-image" style="background-image: url('images/dessert-6.jpg');"></div>
-                            <h4>Lychee Cheesecake</h4>
-                            <p class="price">$7.99</p>
-                        </div>
-                        <div class="menu-item">
-                            <div class="menu-image" style="background-image: url('images/dessert-7.jpg');"></div>
-                            <h4>Red Bean Ice</h4>
-                            <p class="price">$5.99</p>
-                        </div>
-                        <div class="menu-item">
-                            <div class="menu-image" style="background-image: url('images/dessert-8.jpg');"></div>
-                            <h4>Coconut Panna Cotta</h4>
-                            <p class="price">$6.99</p>
-                        </div>
-                        <div class="menu-item">
-                            <div class="menu-image" style="background-image: url('images/dessert-9.jpg');"></div>
-                            <h4>Green Tea Cake</h4>
-                            <p class="price">$6.99</p>
-                        </div>
-                        <div class="menu-item">
-                            <div class="menu-image" style="background-image: url('images/dessert-10.jpg');"></div>
-                            <h4>Yuzu Tart</h4>
-                            <p class="price">$7.99</p>
-                        </div>
-                    </div>
-                </section>
-
-                <!-- Beverage -->
-                <section id="beverage" class="menu-category-section">
-                    <h2>Beverage</h2>
-                    <div class="menu-grid">
-                        <div class="menu-item">
-                            <div class="menu-image" style="background-image: url('images/beverage-1.jpg');"></div>
-                            <h4>Thai Iced Tea</h4>
-                            <p class="price">$4.99</p>
-                        </div>
-                        <div class="menu-item">
-                            <div class="menu-image" style="background-image: url('images/beverage-2.jpg');"></div>
-                            <h4>Mango Smoothie</h4>
-                            <p class="price">$5.99</p>
-                        </div>
-                        <div class="menu-item">
-                            <div class="menu-image" style="background-image: url('images/beverage-3.jpg');"></div>
-                            <h4>Lychee Juice</h4>
-                            <p class="price">$4.99</p>
-                        </div>
-                        <div class="menu-item">
-                            <div class="menu-image" style="background-image: url('images/beverage-4.jpg');"></div>
-                            <h4>Green Tea</h4>
-                            <p class="price">$3.99</p>
-                        </div>
-                        <div class="menu-item">
-                            <div class="menu-image" style="background-image: url('images/beverage-5.jpg');"></div>
-                            <h4>Jasmine Tea</h4>
-                            <p class="price">$3.99</p>
-                        </div>
-                        <div class="menu-item">
-                            <div class="menu-image" style="background-image: url('images/beverage-6.jpg');"></div>
-                            <h4>Taro Milk Tea</h4>
-                            <p class="price">$5.99</p>
-                        </div>
-                        <div class="menu-item">
-                            <div class="menu-image" style="background-image: url('images/beverage-7.jpg');"></div>
-                            <h4>Passion Fruit Juice</h4>
-                            <p class="price">$4.99</p>
-                        </div>
-                        <div class="menu-item">
-                            <div class="menu-image" style="background-image: url('images/beverage-8.jpg');"></div>
-                            <h4>Ginger Ale</h4>
-                            <p class="price">$3.99</p>
-                        </div>
-                        <div class="menu-item">
-                            <div class="menu-image" style="background-image: url('images/beverage-9.jpg');"></div>
-                            <h4>Yuzu Juice</h4>
-                            <p class="price">$5.99</p>
-                        </div>
-                        <div class="menu-item">
-                            <div class="menu-image" style="background-image: url('images/beverage-10.jpg');"></div>
-                            <h4>Oolong Tea</h4>
-                            <p class="price">$3.99</p>
-                        </div>
-                    </div>
-                </section>
-
-                <!-- Cocktail -->
-                <section id="cocktail" class="menu-category-section">
-                    <h2>Cocktail</h2>
-                    <div class="menu-grid">
-                        <div class="menu-item">
-                            <div class="menu-image" style="background-image: url('images/cocktail-1.jpg');"></div>
-                            <h4>Lychee Martini</h4>
-                            <p class="price">$11.99</p>
-                        </div>
-                        <div class="menu-item">
-                            <div class="menu-image" style="background-image: url('images/cocktail-2.jpg');"></div>
-                            <h4>Yuzu Sour</h4>
-                            <p class="price">$12.99</p>
-                        </div>
-                        <div class="menu-item">
-                            <div class="menu-image" style="background-image: url('images/cocktail-3.jpg');"></div>
-                            <h4>Ginger Mule</h4>
-                            <p class="price">$10.99</p>
-                        </div>
-                        <div class="menu-item">
-                            <div class="menu-image" style="background-image: url('images/cocktail-4.jpg');"></div>
-                            <h4>Asian Negroni</h4>
-                            <p class="price">$12.99</p>
-                        </div>
-                        <div class="menu-item">
-                            <div class="menu-image" style="background-image: url('images/cocktail-5.jpg');"></div>
-                            <h4>Mango Margarita</h4>
-                            <p class="price">$11.99</p>
-                        </div>
-                        <div class="menu-item">
-                            <div class="menu-image" style="background-image: url('images/cocktail-6.jpg');"></div>
-                            <h4>Sesame Old Fashioned</h4>
-                            <p class="price">$12.99</p>
-                        </div>
-                        <div class="menu-item">
-                            <div class="menu-image" style="background-image: url('images/cocktail-7.jpg');"></div>
-                            <h4>Coconut Mojito</h4>
-                            <p class="price">$11.99</p>
-                        </div>
-                        <div class="menu-item">
-                            <div class="menu-image" style="background-image: url('images/cocktail-8.jpg');"></div>
-                            <h4>Sake Sangria</h4>
-                            <p class="price">$13.99</p>
-                        </div>
-                        <div class="menu-item">
-                            <div class="menu-image" style="background-image: url('images/cocktail-9.jpg');"></div>
-                            <h4>Lemongrass Cosmopolitan</h4>
-                            <p class="price">$12.99</p>
-                        </div>
-                        <div class="menu-item">
-                            <div class="menu-image" style="background-image: url('images/cocktail-10.jpg');"></div>
-                            <h4>Pandan Daiquiri</h4>
-                            <p class="price">$11.99</p>
-                        </div>
-                    </div>
-                </section>
+                
             </main>
         </div>
     </section>

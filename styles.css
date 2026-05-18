@@ -940,8 +940,12 @@ section {
 .menu-sidebar {
   position: sticky;
   top: 80px;
-  height: fit-content;
+  /* allow vertical scrolling when list is long */
+  max-height: calc(100vh - 120px);
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
   background-color: var(--topbar-bg);
+  padding-right: 8px; /* give room for scrollbar */
 }
 
 .menu-sidebar h2 {
@@ -973,9 +977,10 @@ section {
   text-decoration: none;
   border-left: 3px solid transparent;
   transition: all 0.3s ease;
-  font-size: 18px;
+  font-size: 15px;
   font-weight: 300;
-  letter-spacing: 2px;
+  letter-spacing: 0.6px;
+  text-transform: capitalize;
 }
 
 .category-link:hover,
@@ -1069,7 +1074,11 @@ section {
 }
 
 .menu-item h4::after {
-  content: 'Freshly prepared with signature house flavors.';
+  /* removed default generic description; use .desc element instead */
+  display: none;
+}
+
+.menu-item .desc {
   display: block;
   margin-top: 12px;
   font-size: 13px;
@@ -1078,6 +1087,8 @@ section {
   color: #6f6f6f;
   font-weight: 400;
   text-transform: none;
+  text-align: center;
+  padding: 0 12px;
 }
 
 .menu-item.subject1-item h4::after {

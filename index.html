@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ling Kitchen & Bar - Modern Asian Cuisine</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@300;400;500;700&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <!-- 导航栏 -->
+    <nav class="navbar">
+        <div class="container">
+            <a href="index.html" class="logo" aria-label="Ling Kitchen & Bar">
+                <img src="images/logo.svg" alt="Ling Kitchen & Bar" class="logo-image">
+            </a>
+            <ul class="nav-menu">
+                <li class="nav-item-full"><a href="#home" data-en="Home" data-zh="首页">Home</a></li>
+                <li class="nav-item-full"><a href="#about" data-en="About" data-zh="关于我们">About</a></li>
+                <li class="nav-item-menu"><a href="menu.html" data-en="Menu" data-zh="菜单">Menu</a></li>
+                <li class="nav-item-full"><a href="#footer" data-en="Contact" data-zh="联系">Contact</a></li>
+            </ul>
+            <div class="nav-actions">
+                <button class="lang-toggle" id="langToggle">
+                    <span class="lang-en">EN</span> / <span class="lang-zh">中文</span>
+                </button>
+            </div>
+
+        </div>
+    </nav>
+
+    <!-- 首页横幅 -->
+    <section id="home" class="hero">
+        <video class="hero-video" autoplay muted loop playsinline>
+            <source src="videos/top.mp4" type="video/mp4">
+            <source src="videos/hero.webm" type="video/webm">
+        </video>
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <h2 data-en="Ling Kitchen & Bar" data-zh="Ling 玲珑">Ling Kitchen & Bar</h2>
+            <p data-en="Modern Asian Cuisine & Craft Cocktails in the Heart of Vancouver"
+                data-zh="现代亚洲美食与精调鸡尾酒 · 温哥华市中心">Modern Asian Cuisine & Craft Cocktails in the Heart of Vancouver</p>
+            <div class="hero-buttons">
+                <a href="menu.html" class="btn btn-primary" data-en="View Menu" data-zh="查看菜单">View Menu</a>
+                <a href="#location" class="btn btn-secondary" data-en="Visit Us" data-zh="访问我们">Check on Map</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- 关于我们 -->
+    <section id="about" class="history-section">
+        <div class="container">
+            <div class="history-content">
+                <div class="about-left">
+
+                    <div class="history-text">
+                        <h3 data-en="Our Story" data-zh="我们的故事">Our Story</h3>
+                        <p data-en="Ling Kitchen & Bar brings a contemporary twist to traditional Asian flavors in the heart of downtown Vancouver. We blend culinary heritage with modern techniques, creating an unforgettable dining experience. Ling Kitchen & Bar is a family restaurant inspired by the rich culinary traditions of Northern China." data-zh="Ling 厨房酒吧将传统亚洲风味与现代元素完美融合，坐落于温哥华市中心。我们将传统烹饪技艺与现代手法相结合，打造令人难忘的用餐体验。Ling 厨房酒吧是一家受中国北方丰富烹饪传统启发的家庭餐厅。">Ling Kitchen & Bar brings a contemporary twist to traditional Asian flavors in the heart of downtown Vancouver. We blend culinary heritage with modern techniques, creating an unforgettable dining experience. Ling Kitchen & Bar is a family restaurant inspired by the rich culinary traditions of Northern China.</p>
+
+                        <p data-en="At Ling Kitchen, we continue these traditions of respect for quality and warmth. Food and drinks are meant to be enjoyed together. Our dishes are designed to be shared with family and friends, alongside good drinks and warm conversation. This is our way of honoring the tradition of a family table — Eat & Drink Until U R Happy." data-zh="在 Ling 厨房，我们延续对品质与温情的尊重。食物与饮品应该共同享用。我们的菜肴设计为与家人和朋友分享，配以美酒与温暖的交谈。这是我们对家庭餐桌传统的致敬 —— 吃喝直到你开心为止。">At Ling Kitchen, we continue these traditions of respect for quality and warmth. Food and drinks are meant to be enjoyed together. Our dishes are designed to be shared with family and friends, alongside good drinks and warm conversation. This is our way of honoring the tradition of a family table.</p>
+
+                    </div>
+                </div>
+
+            </div>
+            <div class="history-slogan-wrapper">
+                <p class="story-slogan" data-en="Eat & Drink Until U R Happy" data-zh="吃喝直到你开心为止">Eat & Drink Until U R Happy</p>
+            </div>
+        </div>
+    </section>
+
+
+
+
+    <section class="vibe-section">
+        <div class="vibe-header">
+            <h2>Explore the Vibe</h2>
+        </div>
+
+        <div class="vibe-cards">
+            <!-- Card 1 -->
+            <div class="vibe-card">
+                <img src="images/outside.jpg" alt="Interior Vibe">
+                <div class="vibe-info">
+                    <h3>Interior</h3>
+                </div>
+            </div>
+
+            <!-- Card 2 -->
+            <div class="vibe-card">
+                <img src="images/inside.jpg" alt="Dining Space">
+                <div class="vibe-info">
+                    <h3>Dining</h3>
+                </div>
+            </div>
+
+            <!-- Card 3 -->
+            <div class="vibe-card">
+                <img src="images/window.jpg" alt="Entrance Night">
+                <div class="vibe-info">
+                    <h3>Night Entrance</h3>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- 页脚 -->
+    <footer id="footer" class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <img src="images/logo.svg" alt="Ling Kitchen & Bar" class="footer-logo-image">
+                    <!-- <p data-en="Kitchen & Bar" data-zh="餐吧">Kitchen & Bar</p> -->
+
+                    <div class="footer-social">
+                        <a href="#" aria-label="Instagram" target="_blank">
+                            <img src="icons/instagram.svg" alt="Instagram">
+                        </a>
+
+                        <a href="#" aria-label="Xiaohongshu" target="_blank">
+                            <img src="icons/xiaohongshu.svg" alt="Xiaohongshu">
+                        </a>
+                        <a href="#" aria-label="Douyin" target="_blank">
+                            <img src="icons/tiktok.svg" alt="Douyin">
+                        </a>
+                    </div>
+                </div>
+
+                <div class="footer-location">
+                    <h4 data-en="Location" data-zh="地址">Location</h4>
+                    <p class="location-address">📍 1018 Beach Ave,<br>Vancouver, BC V6E 1T7</p>
+                </div>
+
+                <div class="footer-contact">
+                    <h4 data-en="Contact" data-zh="联系我们">Contact</h4>
+                    <div class="contact-list">
+                        <a href="tel:+16045666600" class="contact-item">
+                            <img src="icons/phone.png" alt="Phone">
+                            <span>(604) 566-6600</span>
+                        </a>
+
+                        <a href="mailto:caivancouverdowntown@gmail.com" class="contact-item">
+                            <img src="icons/mail.svg" alt="Email">
+                            <span>caivancouverdowntown@gmail.com</span>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="footer-hours">
+                    <h4 data-en="Hours" data-zh="营业时间">Hours</h4>
+                    <p data-en="11:00 AM - Mid Night" data-zh="11:00 AM - Mid Night">11:00 AM - Mid Night</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Ling Kitchen & Bar. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

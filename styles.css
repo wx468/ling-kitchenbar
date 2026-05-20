@@ -73,10 +73,10 @@ section {
 }
 
 .history-section .history-content {
-  display: grid;
-  grid-template-columns: minmax(0, 2fr) minmax(0, 1fr);
-  gap: 40px;
-  align-items: start;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 28px;
 }
 
 .history-section .section-header {
@@ -95,6 +95,10 @@ section {
 .history-section .history-text h3,
 .history-section .section-header h2 {
   color: #111111;
+}
+
+.history-section .history-text h3 {
+  text-align: center;
 }
 
 .history-section .history-text p {
@@ -182,6 +186,10 @@ section {
 .contact-section .contact-info,
 .contact-section .contact-form {
   text-align: left;
+}
+
+.history-section .history-text {
+  max-width: 760px;
 }
 
 .menu-section .menu-categories {
@@ -912,7 +920,6 @@ section {
   }
 
   .history-section .history-content {
-    grid-template-columns: 1fr;
     gap: 24px;
   }
 

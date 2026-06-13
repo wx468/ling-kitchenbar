@@ -97,6 +97,11 @@ section {
   color: #111111;
 }
 
+/* Center the main heading inside the history text block */
+.history-section .history-text h2 {
+  text-align: center;
+}
+
 .history-section .history-text h3 {
   text-align: center;
 }
@@ -256,6 +261,26 @@ section {
   border-bottom: 1px solid rgba(0, 0, 0, 0.12);
 }
 
+.promo-bar {
+  position: fixed;
+  top: 64px;
+  left: 0;
+  width: 100%;
+  z-index: 999;
+  min-height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 8px 20px;
+  background: #ffffff;
+  border-bottom: 1px solid rgba(203, 28, 35, 0.28);
+  color: #CB1C23;
+  font-size: 14px;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+  text-align: center;
+}
+
 .navbar .container {
     max-width: none;
   height: 64px;                 /* 🔥 关键：锁死高度 */
@@ -366,7 +391,7 @@ section {
 
 }
 .hero {
-  padding-top: 64px; /* navbar 高度 */
+  padding-top: 104px;
 }
 
 .hero-video {
@@ -842,8 +867,9 @@ section {
 ================================ */
 
 @media (max-width: 768px) {
+  /* Show both Home and Menu on mobile, with Home left of Menu */
   .nav-item-full {
-    display: none;
+    display: list-item;
   }
 
   .nav-item-menu {
@@ -930,7 +956,7 @@ section {
 ================================ */
 
 .menu-page-section {
-  padding: 30px 20px;
+  padding: 104px 20px 30px;
   background-color: var(--topbar-bg);
   min-height: 100vh;
 }
@@ -946,7 +972,7 @@ section {
 /* 左侧分类菜单 */
 .menu-sidebar {
   position: sticky;
-  top: 80px;
+  top: 104px;
   /* allow vertical scrolling when list is long */
   max-height: calc(100vh - 120px);
   overflow-y: auto;
@@ -1135,22 +1161,30 @@ section {
   }
 
   .menu-sidebar {
-    top: 64px;
+    top: 104px;
   }
 }
 
 @media (max-width: 768px) {
+  .menu-page-section {
+    padding-top: 92px;
+  }
+
   .menu-container {
     grid-template-columns: 1fr;
+    gap: 12px;
   }
 
   .menu-sidebar {
     position: sticky;
-    top: 64px;
-    background-color: var(--bg-dark);
+    top: 92px;
+    /* make sidebar transparent on mobile so dropdown appears seamless */
+    background-color: transparent;
     z-index: 100;
-    padding: 16px 0;
-    margin-bottom: 20px;
+    padding: 0 0 6px;
+    /* allow dropdown to escape sidebar instead of being clipped */
+    overflow: visible;
+    margin-bottom: 0;
   }
 
   .menu-sidebar h2 {
@@ -1167,6 +1201,7 @@ section {
 
   .custom-select {
     display: block;
+    margin-top: 8px;
   }
 
   .menu-grid {
@@ -1176,6 +1211,10 @@ section {
 
   .menu-image {
     background-size: 74%;
+  }
+
+  .menu-page-section .menu-category-section {
+    padding: 0;
   }
 
   .menu-category-section h2 {
@@ -1234,11 +1273,11 @@ section {
 
 .custom-select-trigger {
   width: 100%;
-  background: var(--bg-card);
-  border: 1px solid var(--border);
+  background: #ffffff;
+  border: 1px solid rgba(0,0,0,0.08);
   border-radius: 10px;
   padding: 14px 16px;
-  color: var(--text-light);
+  color: #111111;
   font-size: 16px;
   letter-spacing: 0.5px;
   display: flex;
@@ -1263,14 +1302,18 @@ section {
   top: calc(100% + 8px);
   left: 0;
   right: 0;
-  background: #121212;
-  border: 1px solid var(--border);
+  background: #ffffff;
+  border: 1px solid rgba(0,0,0,0.08);
   border-radius: 12px;
   padding: 8px 0;
-  box-shadow: 0 20px 50px rgba(0,0,0,0.8);
+  box-shadow: 0 12px 30px rgba(0,0,0,0.08);
   list-style: none;
   z-index: 999;
   display: none;
+  /* show max 5 items, allow the rest to scroll */
+  max-height: 240px; /* ~5 * 48px */
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
 }
 
 .custom-select.open .custom-options {
@@ -1281,18 +1324,18 @@ section {
 .custom-options li {
   padding: 12px 18px;
   font-size: 15px;
-  color: var(--text-light);
+  color: #111111;
   cursor: pointer;
   transition: background 0.25s ease, color 0.25s ease;
 }
 
 .custom-options li:hover {
-  background: rgba(201,161,90,0.12);
+  background: rgba(201,161,90,0.08);
   color: var(--gold);
 }
 
 .custom-options li.active {
-  color: var(--gold);
+  color: #111111;
   background: rgba(201,161,90,0.18);
 }
 
@@ -1324,6 +1367,14 @@ section {
   .nav-actions {
     margin-right: 16px;
     gap: 8px;
+  }
+
+  .promo-bar {
+    top: 56px;
+    min-height: 36px;
+    padding: 7px 14px;
+    font-size: 12px;
+    letter-spacing: 0.2px;
   }
 
   .nav-actions a,

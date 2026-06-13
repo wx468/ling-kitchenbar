@@ -24,22 +24,31 @@ document.addEventListener('DOMContentLoaded', () => {
     document.body.setAttribute('data-lang', 'en');
 });
 
-// 移动端导航菜单切换
+// 移动端导航菜单切换（有时页面会移除 .hamburger 元素，需先检查）
 const hamburger = document.querySelector('.hamburger');
 const navMenu = document.querySelector('.nav-menu');
 
-hamburger.addEventListener('click', () => {
-    hamburger.classList.toggle('active');
-    navMenu.classList.toggle('active');
-});
-
-// 点击菜单项后关闭移动端菜单
-document.querySelectorAll('.nav-menu a').forEach(link => {
-    link.addEventListener('click', () => {
-        hamburger.classList.remove('active');
-        navMenu.classList.remove('active');
+if (hamburger && navMenu) {
+    hamburger.addEventListener('click', () => {
+        hamburger.classList.toggle('active');
+        navMenu.classList.toggle('active');
     });
-});
+
+    // 点击菜单项后关闭移动端菜单
+    document.querySelectorAll('.nav-menu a').forEach(link => {
+        link.addEventListener('click', () => {
+            hamburger.classList.remove('active');
+            navMenu.classList.remove('active');
+        });
+    });
+} else if (navMenu) {
+    // If there's no hamburger (e.g. removed on certain pages), ensure menu links still work without referencing hamburger
+    document.querySelectorAll('.nav-menu a').forEach(link => {
+        link.addEventListener('click', () => {
+            navMenu.classList.remove('active');
+        });
+    });
+}
 
 // 滚动时导航栏显示黑色背景
 const navbar = document.querySelector('.navbar');
@@ -257,9 +266,16 @@ if (categoryLinks.length > 0) {
         const label = trigger.querySelector('span');
         const options = customSelect.querySelectorAll('.custom-options li');
 
-        trigger.addEventListener('click', (e) => {
+        const toggleOpen = (e) => {
             e.stopPropagation();
             customSelect.classList.toggle('open');
+        };
+
+        trigger.addEventListener('click', toggleOpen);
+        // Add touchstart for better mobile responsiveness
+        trigger.addEventListener('touchstart', (e) => {
+            e.preventDefault();
+            toggleOpen(e);
         });
 
         options.forEach(option => {
@@ -284,8 +300,16 @@ if (categoryLinks.length > 0) {
             });
         });
 
-        document.addEventListener('click', () => {
-            customSelect.classList.remove('open');
+        document.addEventListener('click', (e) => {
+            if (!customSelect.contains(e.target)) {
+                customSelect.classList.remove('open');
+            }
+        });
+        // also close on touchstart outside the select
+        document.addEventListener('touchstart', (e) => {
+            if (!customSelect.contains(e.target)) {
+                customSelect.classList.remove('open');
+            }
         });
     }
 

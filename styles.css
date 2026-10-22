@@ -344,6 +344,10 @@ section {
   width: 100%;
 }
 
+.nav-menu a.active::after {
+  width: 100%;
+}
+
 .nav-actions {
   margin-left: auto;
   display: flex;
@@ -962,8 +966,7 @@ section {
 }
 
 .parking-page-section {
-  min-height: 100vh;
-  padding: 136px 20px 64px;
+  padding: 136px 20px 24px;
   background-color: var(--topbar-bg);
   color: #111111;
 }
@@ -1417,7 +1420,7 @@ section {
   }
 
   .nav-actions {
-    margin-right: 16px;
+    margin-right: 0;
     gap: 8px;
   }
 
@@ -1434,6 +1437,13 @@ section {
     font-size: 11px;
     padding: 10px 14px;
     letter-spacing: 0.5px;
+  }
+
+  .nav-actions .lang-toggle {
+    padding: 6px 8px;
+    font-size: 10px;
+    letter-spacing: 0.2px;
+    white-space: nowrap;
   }
 
   .hamburger {

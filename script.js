@@ -135,8 +135,22 @@ document.querySelectorAll('.feature-card, .location-card, .menu-category').forEa
 // 活动导航链接高亮
 const sections = document.querySelectorAll('section[id]');
 const navLinks = document.querySelectorAll('.nav-menu a');
+const currentPage = window.location.pathname.split('/').pop() || 'index.html';
+
+navLinks.forEach(link => {
+    const linkUrl = new URL(link.href, window.location.href);
+    const linkPage = linkUrl.pathname.split('/').pop() || 'index.html';
+
+    if (linkPage === currentPage && (linkUrl.hash || currentPage !== 'index.html')) {
+        link.classList.add('active');
+    }
+});
 
 window.addEventListener('scroll', () => {
+    if (currentPage !== 'index.html') {
+        return;
+    }
+
     let current = '';
 
     sections.forEach(section => {
@@ -159,9 +173,6 @@ window.addEventListener('scroll', () => {
 // 为活动链接添加样式
 const style = document.createElement('style');
 style.textContent = `
-    .nav-menu a.active {
-        color: var(--primary-color);
-    }
     .nav-menu a.active::after {
         width: 100%;
     }

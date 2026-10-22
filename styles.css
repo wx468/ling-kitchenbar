@@ -961,6 +961,58 @@ section {
   min-height: 100vh;
 }
 
+.parking-page-section {
+  min-height: 100vh;
+  padding: 136px 20px 64px;
+  background-color: var(--topbar-bg);
+  color: #111111;
+}
+
+.parking-container {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.parking-header {
+  margin-bottom: 32px;
+  text-align: center;
+}
+
+.parking-eyebrow {
+  margin-bottom: 8px;
+  color: var(--gold);
+  font-size: 13px;
+  letter-spacing: 3px;
+}
+
+.parking-header h1 {
+  margin-bottom: 8px;
+  font-family: 'Playfair Display', 'Noto Serif SC', serif;
+  font-size: clamp(2rem, 5vw, 3.5rem);
+  font-weight: 400;
+  letter-spacing: 2px;
+}
+
+.parking-header > p:last-child {
+  color: #666666;
+  font-size: 15px;
+}
+
+.parking-guide-image {
+  max-width: 760px;
+  margin: 0 auto;
+  overflow: hidden;
+  background: #ffffff;
+  border: 1px solid rgba(201, 161, 90, 0.35);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+}
+
+.parking-guide-image img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
 .menu-container {
   max-width: 1400px;
   margin: 0 auto;
